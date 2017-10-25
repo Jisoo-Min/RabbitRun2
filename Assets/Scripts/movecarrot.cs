@@ -5,10 +5,11 @@ using UnityEngine;
 public class movecarrot : MonoBehaviour
 {
     public float carrotSpeed;
+
     // Use this for initialization
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
@@ -22,5 +23,12 @@ public class movecarrot : MonoBehaviour
         }
     }
 
-  
+    public void OnEnable()
+    {
+        if(transform.position.x>9)
+        {
+            transform.position = new Vector2(9,-2);
+        }
+    }
+
 }

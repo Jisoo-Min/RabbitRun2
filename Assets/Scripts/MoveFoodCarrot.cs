@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movecarrot : MonoBehaviour
+public class MoveFoodCarrot : MonoBehaviour
 {
     public float carrotSpeed;
-
+    public float outOfRangeX;
     // Use this for initialization
     void Start()
     {
@@ -17,17 +17,9 @@ public class movecarrot : MonoBehaviour
     {
         transform.Translate(Vector3.left * carrotSpeed * Time.deltaTime);
 
-        if (this.transform.position.x < -10f)
+        if (this.transform.position.x < outOfRangeX)
         {
             Destroy(this.gameObject);
-        }
-    }
-
-    public void OnEnable()
-    {
-        if(transform.position.x>9)
-        {
-            transform.position = new Vector2(9,-2);
         }
     }
 

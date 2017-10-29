@@ -28,9 +28,5 @@ public class MoveObstacleSeaweed : MonoBehaviour {
             
         }
     }
-
-    void OnEnable() //start함수보다 먼저 선언되는 메서드 객체 초기화시켜주는 메서드
-    {
-      
-    }
+    
 }

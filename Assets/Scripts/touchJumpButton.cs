@@ -22,19 +22,20 @@ public class touchJumpButton : MonoBehaviour
         is_onground = false;
     }
 
-    public int jump_track() //점프 횟수 세기
+    public void jump_track() //점프 횟수 세기
     {
+        
         if (is_onground == true)
         {
-            jump_number = 0;
+            OnCollisionEnter();
         }
+        
 
         if (target == jumpbutton)
         {
             ++jump_number;
             Debug.Log(jump_number);
         }
-        return jump_number;
     }
 
     void Update()
@@ -45,7 +46,7 @@ public class touchJumpButton : MonoBehaviour
         {
             CastRay();
             jump_track();
-            if (is_onground == true)
+            if (is_onground == true) //땅에 있을때
             {
                 if (target == jumpbutton)
                 {
@@ -53,7 +54,7 @@ public class touchJumpButton : MonoBehaviour
                 }
             }
 
-            else if (is_onground == false)
+            else if (is_onground == false) //점프중일때
             {
                 if ((target == jumpbutton) && jump_number <= 2)
                 {
@@ -62,7 +63,10 @@ public class touchJumpButton : MonoBehaviour
 
                 if (jump_number > 2) //점프횟수가 2번이 넘었을때
                 {
+                    //rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
+
                     rigidbody.AddForce(new Vector2(0, 0));
+                    jump_number = 0;
                 }
             }
         }
@@ -70,7 +74,7 @@ public class touchJumpButton : MonoBehaviour
 
     }
 
-    void CastRay()
+    void CastRay() // 클릭한 곳을 target으로 지정
     {
         target = null;
 

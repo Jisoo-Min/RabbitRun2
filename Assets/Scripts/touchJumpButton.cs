@@ -6,29 +6,26 @@ using UnityEngine;
 public class touchJumpButton : MonoBehaviour
 {
     private float jump = 8;
-    private int jump_number;
+    public int jump_number;
     private bool is_onground;
     private GameObject target; //클릭한 곳
     public GameObject jumpbutton; //점프버튼
 
-    void OnCollisionEnter() //접촉했을때
+    void OnCollisionEnter2D(Collision2D collision) //접촉했을때
     {
         jump_number = 0;
         is_onground = true;
     }
 
-    void OnCollisionExit() //접촉하지 않았을때
+
+
+    void OnCollisionExit2D() //접촉하지 않았을때
     {
         is_onground = false;
     }
 
     public void jump_track() //점프 횟수 세기
     {
-        
-        if (is_onground == true)
-        {
-            OnCollisionEnter();
-        }
         
 
         if (target == jumpbutton)
@@ -66,7 +63,6 @@ public class touchJumpButton : MonoBehaviour
                     //rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
 
                     rigidbody.AddForce(new Vector2(0, 0));
-                    jump_number = 0;
                 }
             }
         }

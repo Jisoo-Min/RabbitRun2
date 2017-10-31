@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Jump
   - Ground
+  - carrot
   layers:
   - Default
   - TransparentFX

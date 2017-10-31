@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class touchJumpButton : MonoBehaviour
+public class TouchJumpButton : MonoBehaviour
 {
     private float jump = 8;
     public int jump_number;
@@ -26,8 +26,6 @@ public class touchJumpButton : MonoBehaviour
 
     public void jump_track() //점프 횟수 세기
     {
-        
-
         if (target == jumpbutton)
         {
             ++jump_number;

@@ -11,6 +11,9 @@ public class TouchJumpButton : MonoBehaviour
     private GameObject target; //클릭한 곳
     public GameObject jumpbutton; //점프버튼
 
+    public static bool checkClick = false;
+
+
     void OnCollisionEnter2D(Collision2D collision) //접촉했을때
     {
         jump_number = 0;
@@ -33,28 +36,33 @@ public class TouchJumpButton : MonoBehaviour
         }
     }
 
+
+    public void IsClick()
+    {
+        checkClick = true;
+    }
+
     void Update()
     {
         Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
 
-        if (Input.GetMouseButtonDown(0)) // 화면이 클릭되었을때
+        if (checkClick==true) // 화면이 클릭되었을때
         {
-            CastRay();
-            jump_track();
+            ++jump_number;
+            Debug.Log(jump_number);
+
             if (is_onground == true) //땅에 있을때
             {
-                if (target == jumpbutton)
-                {
+                
                     rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump);
-                }
+                
             }
 
             else if (is_onground == false) //점프중일때
             {
-                if ((target == jumpbutton) && jump_number <= 2)
-                {
+               
                     rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump);
-                }
+                
 
                 if (jump_number > 2) //점프횟수가 2번이 넘었을때
                 {
@@ -65,7 +73,7 @@ public class TouchJumpButton : MonoBehaviour
             }
         }
 
-
+        checkClick = false;
     }
 
     void CastRay() // 클릭한 곳을 target으로 지정

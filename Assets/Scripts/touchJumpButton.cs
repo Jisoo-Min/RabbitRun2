@@ -26,15 +26,7 @@ public class TouchJumpButton : MonoBehaviour
     {
         is_onground = false;
     }
-
-    public void jump_track() //점프 횟수 세기
-    {
-        if (target == jumpbutton)
-        {
-            ++jump_number;
-            Debug.Log(jump_number);
-        }
-    }
+    
 
 
     public void IsClick()
@@ -60,7 +52,7 @@ public class TouchJumpButton : MonoBehaviour
 
             else if (is_onground == false) //점프중일때
             {
-               
+               if(jump_number<=2)
                     rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump);
                 
 

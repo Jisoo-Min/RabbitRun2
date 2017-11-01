@@ -4,15 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Character : MonoBehaviour {
-
+    public GameObject resultPanel;
     private float jump = 8;
     private int jump_number;
     private bool is_onground;
-    private GameObject target; //클릭한 곳
-    public  int foodCount = 0;
+    public int score = 0;
+    public int coin = 0;
     public Text textScore;
+<<<<<<< HEAD
     
     MoveFoodCarrot ca;
+=======
+    public Text textCoin;
+    public Text resultScore;
+
+>>>>>>> df8519531350fb2e1ff0b2fa6beec4b1cc771b35
 
     public static bool checkClick = false;
 
@@ -21,31 +27,57 @@ public class Character : MonoBehaviour {
         
     }
 
-    void OnTriggerEnter2D(Collider2D other)   // 당근을 먹었을 때
+    void OnTriggerEnter2D(Collider2D item)   // 당근을 먹었을 때
     {
-        if (other.tag == "carrot")
-        { 
-            Destroy(other.gameObject);
-            ++foodCount;
-
-            textScore.text = foodCount.ToString();
+        if (item.tag == "carrot") //기본먹이
+        {
+            Destroy(item.gameObject);
+            score += 100;
+           
         }
+        else if(item.tag == "coin")
+        {
+            Destroy(item.gameObject);
+            ++coin;
+            textCoin.text = coin.ToString();
+        }
+        else if (item.tag == "broccoli") //크기증가먹이
+        {
+            Destroy(item.gameObject);
+            score += 200; 
+        }
+        else if (item.tag =="corn") //크기감소먹이
+        {
+            Destroy(item.gameObject);
+            score += 30;
+        }
+        else if(item.tag =="clover")//속도 증가먹이
+        {
+            Destroy(item.gameObject);
+            score += 200;
+        }
+        textScore.text = score.ToString();
     }
 
     void OnCollisionEnter2D(Collision2D collision) //접촉했을때
     {
         jump_number = 0;
         is_onground = true;
-    }
 
+        if(collision.gameObject.name == "deadline")//죽는 라인에 충돌할 경우 게임 중지 
+        {
+            Destroy(collision.gameObject);
+            Time.timeScale = 0;
+            resultScore.text = score.ToString();
+            resultPanel.SetActive(true);
+        }
+    }
 
     void OnCollisionExit2D() //접촉하지 않았을때
     {
         is_onground = false;
     }
-
-
-
+    
     public void IsClick()
     {
         checkClick = true;
@@ -85,17 +117,7 @@ public class Character : MonoBehaviour {
         checkClick = false;
     }
 
-    //void CastRay() // 클릭한 곳을 target으로 지정
-    //{
-    //    target = null;
 
-    //    Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //    RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
 
-    //    if (hit.collider != null) // 클릭되었다면 실행
-    //    {
-    //        target = hit.collider.gameObject; //클릭된 게임 오브젝트를 타겟으로 지정
-    //    }
 
-    //}
 }

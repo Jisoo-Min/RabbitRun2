@@ -8,6 +8,10 @@ TagManager:
   - Ground
   - carrot
   - obstacle
+  - coin
+  - clover
+  - corn
+  - broccoli
   layers:
   - Default
   - TransparentFX

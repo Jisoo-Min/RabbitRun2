@@ -70,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carrotSpeed: 5
   outOfRangeX: -12
+  carrot: 0
 --- !u!212 &212493274345730568
 SpriteRenderer:
   m_ObjectHideFlags: 1

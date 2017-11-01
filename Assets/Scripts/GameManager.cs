@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
 {
     public float waitingTime = 3.0f;
     static GameManager manager;
-    public bool ready = true;
-    public GameObject rabbit;
+    public bool ready = true; //게임의 종료를 판단
+    public GameObject obstacle;//장애물오브젝트 
 
     // Use this for initialization
     void Start()
@@ -25,12 +25,12 @@ public class GameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && ready == true)
         {
             ready = false;
-            InvokeRepeating("MakeRabbit", 1f, waitingTime);
+            InvokeRepeating("MakeRabbit", 1f, waitingTime);//메소드를 일정시간마다 호출시켜주는 함수
         }
     }
 
     void MakeRabbit()
     {
-        Instantiate(rabbit);
+        Instantiate(obstacle);//obstacle객체생성
     }
 }

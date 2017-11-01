@@ -7,6 +7,7 @@ public class MoveFoodCarrot : MonoBehaviour
     public float carrotSpeed;
     public float outOfRangeX;
     public float carrot;
+
     // Use this for initialization
     void Start()
     {

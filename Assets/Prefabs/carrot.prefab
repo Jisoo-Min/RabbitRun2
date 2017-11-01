@@ -54,9 +54,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.15}
   serializedVersion: 2
-  m_Radius: 5.335
+  m_Radius: 5.6
 --- !u!114 &114775495008308100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carrotSpeed: 5
   outOfRangeX: -12
+  carrot: 0
 --- !u!212 &212493274345730568
 SpriteRenderer:
   m_ObjectHideFlags: 1

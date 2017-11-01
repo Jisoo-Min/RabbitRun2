@@ -26,14 +26,14 @@ public class TouchJumpButton : MonoBehaviour
         is_onground = true;
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)   // 당근을 먹었을 때
-    //{
-    //   if(tag=="carrot")
-    //    {
-    //        ca.CarrotCollected();
-    //        Destroy(gameObject);
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)   // 당근을 먹었을 때
+    {
+        if (tag == "carrot")
+        {
+            ca.CarrotCollected();
+            Destroy(gameObject);
+        }
+    }
 
 
     void OnCollisionExit2D() //접촉하지 않았을때

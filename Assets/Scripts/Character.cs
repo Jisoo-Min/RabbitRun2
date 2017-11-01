@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Character : MonoBehaviour {
-
+    public GameObject resultPanel;
     private float jump = 8;
     public int jump_number;
     private bool is_onground;
-    private GameObject target; //클릭한 곳
     public int score = 0;
     public int coin = 0;
     public Text textScore;
     public Text textCoin;
-    MoveFoodCarrot ca;
+    public Text resultScore;
+
 
     public static bool checkClick = false;
 
@@ -61,8 +61,10 @@ public class Character : MonoBehaviour {
 
         if(collision.gameObject.name == "deadline")//죽는 라인에 충돌할 경우 게임 중지 
         {
-            Time.timeScale = 0;
             Destroy(collision.gameObject);
+            Time.timeScale = 0;
+            resultScore.text = score.ToString();
+            resultPanel.SetActive(true);
         }
     }
 

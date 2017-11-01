@@ -9,9 +9,10 @@ public class Character : MonoBehaviour {
     public int jump_number;
     private bool is_onground;
     private GameObject target; //클릭한 곳
-    public  int foodCount = 0;
+    public int score = 0;
+    public int coin = 0;
     public Text textScore;
-
+    public Text textCoin;
     MoveFoodCarrot ca;
 
     public static bool checkClick = false;
@@ -24,12 +25,20 @@ public class Character : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)   // 당근을 먹었을 때
     {
         if (other.tag == "carrot")
-        { 
+        {
             Destroy(other.gameObject);
-            ++foodCount;
-
-            textScore.text = foodCount.ToString();
+            score += 100;
+            textScore.text = score.ToString();
         }
+        else if(other.tag == "coin")
+        {
+ 
+            Destroy(other.gameObject);
+            ++coin;
+            textCoin.text = coin.ToString();
+           
+        }
+
     }
 
     void OnCollisionEnter2D(Collision2D collision) //접촉했을때
@@ -38,14 +47,11 @@ public class Character : MonoBehaviour {
         is_onground = true;
     }
 
-
     void OnCollisionExit2D() //접촉하지 않았을때
     {
         is_onground = false;
     }
-
-
-
+    
     public void IsClick()
     {
         checkClick = true;
@@ -85,17 +91,5 @@ public class Character : MonoBehaviour {
         checkClick = false;
     }
 
-    //void CastRay() // 클릭한 곳을 target으로 지정
-    //{
-    //    target = null;
 
-    //    Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //    RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
-
-    //    if (hit.collider != null) // 클릭되었다면 실행
-    //    {
-    //        target = hit.collider.gameObject; //클릭된 게임 오브젝트를 타겟으로 지정
-    //    }
-
-    //}
 }

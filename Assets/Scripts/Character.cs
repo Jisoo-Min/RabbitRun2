@@ -58,6 +58,12 @@ public class Character : MonoBehaviour {
     {
         jump_number = 0;
         is_onground = true;
+
+        if(collision.gameObject.name == "deadline")//죽는 라인에 충돌할 경우 게임 중지 
+        {
+            Time.timeScale = 0;
+            Destroy(collision.gameObject);
+        }
     }
 
     void OnCollisionExit2D() //접촉하지 않았을때
@@ -103,6 +109,8 @@ public class Character : MonoBehaviour {
 
         checkClick = false;
     }
+
+
 
 
 }

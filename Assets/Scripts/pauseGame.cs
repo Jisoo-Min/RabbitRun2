@@ -33,4 +33,6 @@ public class PauseGame : MonoBehaviour
         pauseButton.SetActive(true);
         pausePanel.SetActive(false);
     }
+
+
 }

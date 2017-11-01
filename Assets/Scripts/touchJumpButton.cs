@@ -13,12 +13,27 @@ public class TouchJumpButton : MonoBehaviour
 
     public static bool checkClick = false;
 
+    MoveFoodCarrot ca;
+
+    void Start()
+    {
+        ca = GameObject.Find("MoveFoodCarrot").GetComponent<MoveFoodCarrot>();
+    }
 
     void OnCollisionEnter2D(Collision2D collision) //접촉했을때
     {
         jump_number = 0;
         is_onground = true;
     }
+
+    //private void OnTriggerEnter2D(Collider2D collision)   // 당근을 먹었을 때
+    //{
+    //   if(tag=="carrot")
+    //    {
+    //        ca.CarrotCollected();
+    //        Destroy(gameObject);
+    //    }
+    //}
 
 
 

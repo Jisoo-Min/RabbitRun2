@@ -6,6 +6,7 @@ public class MoveFoodCarrot : MonoBehaviour
 {
     public float carrotSpeed;
     public float outOfRangeX;
+    public float carrot;
     // Use this for initialization
     void Start()
     {
@@ -21,6 +22,11 @@ public class MoveFoodCarrot : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    public void CarrotCollected()
+    {
+        carrot += 1;
     }
 
 }

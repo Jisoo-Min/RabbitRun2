@@ -213,8 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f561e4e6098266143afe25b1e3577209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump_number: 0
-  jumpbutton: {fileID: 0}
 --- !u!61 &132549042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -326,8 +324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f561e4e6098266143afe25b1e3577209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump_number: 0
-  jumpbutton: {fileID: 1518354550}
 --- !u!1 &151660088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,6 +1966,16 @@ Prefab:
     - target: {fileID: 4425613897243636, guid: d6355d9aa5544274985db03311fd11c4, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 58342156853280070, guid: d6355d9aa5544274985db03311fd11c4,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 58342156853280070, guid: d6355d9aa5544274985db03311fd11c4,
+        type: 2}
+      propertyPath: m_Radius
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6355d9aa5544274985db03311fd11c4, type: 2}

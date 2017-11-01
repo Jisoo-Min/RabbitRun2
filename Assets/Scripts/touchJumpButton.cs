@@ -14,7 +14,6 @@ public class TouchJumpButton : MonoBehaviour
     public static bool checkClick = false;
 
 
-
     void OnCollisionEnter2D(Collision2D collision) //접촉했을때
     {
         jump_number = 0;
@@ -22,11 +21,13 @@ public class TouchJumpButton : MonoBehaviour
     }
 
 
+
     void OnCollisionExit2D() //접촉하지 않았을때
     {
         is_onground = false;
     }
     
+
 
     public void IsClick()
     {

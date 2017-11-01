@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TouchJumpButton : MonoBehaviour
+public class touchJumpButton : MonoBehaviour
 {
     private float jump = 8;
     public int jump_number;

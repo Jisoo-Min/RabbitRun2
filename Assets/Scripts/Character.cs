@@ -22,23 +22,36 @@ public class Character : MonoBehaviour {
         
     }
 
-    void OnTriggerEnter2D(Collider2D other)   // 당근을 먹었을 때
+    void OnTriggerEnter2D(Collider2D item)   // 당근을 먹었을 때
     {
-        if (other.tag == "carrot")
+        if (item.tag == "carrot") //기본먹이
         {
-            Destroy(other.gameObject);
+            Destroy(item.gameObject);
             score += 100;
-            textScore.text = score.ToString();
-        }
-        else if(other.tag == "coin")
-        {
- 
-            Destroy(other.gameObject);
-            ++coin;
-            textCoin.text = coin.ToString();
            
         }
-
+        else if(item.tag == "coin")
+        {
+            Destroy(item.gameObject);
+            ++coin;
+            textCoin.text = coin.ToString();
+        }
+        else if (item.tag == "broccoli") //크기증가먹이
+        {
+            Destroy(item.gameObject);
+            score += 200; 
+        }
+        else if (item.tag =="corn") //크기감소먹이
+        {
+            Destroy(item.gameObject);
+            score += 30;
+        }
+        else if(item.tag =="clover")//속도 증가먹이
+        {
+            Destroy(item.gameObject);
+            score += 200;
+        }
+        textScore.text = score.ToString();
     }
 
     void OnCollisionEnter2D(Collision2D collision) //접촉했을때

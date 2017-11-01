@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pauseGame : MonoBehaviour
+public class PauseGame : MonoBehaviour
 {
     public GameObject pausePannel;
     public GameObject pauseButton;
+    public GameObject resultPannel;
     // Use this for initialization
     void Start()
     {
         pausePannel.SetActive(false);
+        resultPannel.SetActive(false);
     }
 
     // Update is called once per frame

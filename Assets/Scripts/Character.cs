@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class Character : MonoBehaviour {
 
     private float jump = 8;
-    public int jump_number;
+    private int jump_number;
     private bool is_onground;
     private GameObject target; //클릭한 곳
     public  int foodCount = 0;
     public Text textScore;
-
+    
     MoveFoodCarrot ca;
 
     public static bool checkClick = false;

@@ -426,7 +426,6 @@ GameObject:
   - component: {fileID: 132549044}
   - component: {fileID: 132549043}
   - component: {fileID: 132549042}
-  - component: {fileID: 132549041}
   - component: {fileID: 132549046}
   m_Layer: 0
   m_Name: running_rabbit1
@@ -435,22 +434,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &132549041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 132549040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f561e4e6098266143afe25b1e3577209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jump: 8
-  jump_number: 0
-  is_onground: 0
-  target: {fileID: 0}
-  jumpbutton: {fileID: 0}
 --- !u!61 &132549042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -547,8 +530,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.48, y: -3.34, z: 0}
   m_LocalScale: {x: 0.33161485, y: 0.250029, z: 0.4302519}
-  m_Children:
-  - {fileID: 1503680119}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -563,10 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f561e4e6098266143afe25b1e3577209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump: 8
   jump_number: 0
-  is_onground: 0
-  target: {fileID: 0}
   jumpbutton: {fileID: 1518354550}
 --- !u!1001 &139848004
 Prefab:
@@ -676,7 +655,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 381520050}
+  - {fileID: 245226054}
   - {fileID: 52657922}
   - {fileID: 33972752}
   - {fileID: 23991811}
@@ -687,17 +666,19 @@ Transform:
   - {fileID: 1902830520}
   - {fileID: 1566417677}
   - {fileID: 433787761}
-  - {fileID: 1001044053}
+  - {fileID: 1195589061}
   - {fileID: 1588524138}
   - {fileID: 1392709403}
   - {fileID: 1479506475}
   - {fileID: 1495201427}
   - {fileID: 1472712605}
-  - {fileID: 1090030144}
+  - {fileID: 1001044053}
   - {fileID: 1374278712}
   - {fileID: 1344301015}
   - {fileID: 1370318170}
+  - {fileID: 1090030144}
   - {fileID: 1334439715}
+  - {fileID: 381520050}
   - {fileID: 825158378}
   - {fileID: 972223580}
   - {fileID: 757055641}
@@ -708,8 +689,6 @@ Transform:
   - {fileID: 438083542}
   - {fileID: 450323304}
   - {fileID: 139848005}
-  - {fileID: 1195589061}
-  - {fileID: 245226054}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3476,34 +3455,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4739805156466282, guid: cf3dadc79db55d24283eb9a6168040dc,
     type: 2}
   m_PrefabInternal: {fileID: 1495201426}
---- !u!1 &1503680118
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1503680119}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1503680119
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1503680118}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 69.55621, y: 4.500439, z: 0}
-  m_LocalScale: {x: 2.3242197, y: 2.3242197, z: 2.3242197}
-  m_Children: []
-  m_Father: {fileID: 132549045}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1518354550
 GameObject:
   m_ObjectHideFlags: 0
@@ -3538,7 +3489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 160.75, y: 0}
+  m_AnchoredPosition: {x: 169.75, y: 5}
   m_SizeDelta: {x: 332.5, y: 368}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1518354552
@@ -3580,7 +3531,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 132549041}
+      - m_Target: {fileID: 132549046}
         m_MethodName: IsClick
         m_Mode: 1
         m_Arguments:

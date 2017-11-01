@@ -7,6 +7,7 @@ TagManager:
   - Jump
   - Ground
   - carrot
+  - obstacle
   layers:
   - Default
   - TransparentFX

@@ -1,15 +1,16 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TouchJumpButton : MonoBehaviour
-{
+public class Character : MonoBehaviour {
+
     private float jump = 8;
     public int jump_number;
     private bool is_onground;
     private GameObject target; //클릭한 곳
-    public GameObject jumpbutton; //점프버튼
+    public  int foodCount = 0;
+    public Text textScore;
 
     MoveFoodCarrot ca;
 
@@ -17,15 +18,17 @@ public class TouchJumpButton : MonoBehaviour
 
     void Start()
     {
-        ca = GameObject.Find("MoveFoodCarrot").GetComponent<MoveFoodCarrot>();
+        
     }
 
     void OnTriggerEnter2D(Collider2D other)   // 당근을 먹었을 때
     {
         if (other.tag == "carrot")
-        {
-            ca.CarrotCollected();
+        { 
             Destroy(other.gameObject);
+            ++foodCount;
+
+            textScore.text = foodCount.ToString();
         }
     }
 
@@ -40,7 +43,7 @@ public class TouchJumpButton : MonoBehaviour
     {
         is_onground = false;
     }
-    
+
 
 
     public void IsClick()
@@ -52,23 +55,23 @@ public class TouchJumpButton : MonoBehaviour
     {
         Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
 
-        if (checkClick==true) // 화면이 클릭되었을때
+        if (checkClick == true) // 화면이 클릭되었을때
         {
             ++jump_number;
             Debug.Log(jump_number);
 
             if (is_onground == true) //땅에 있을때
             {
-                
-                    rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump);
-                
+
+                rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump);
+
             }
 
             else if (is_onground == false) //점프중일때
             {
-               if(jump_number<=2)
+                if (jump_number <= 2)
                     rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump);
-                
+
 
                 if (jump_number > 2) //점프횟수가 2번이 넘었을때
                 {

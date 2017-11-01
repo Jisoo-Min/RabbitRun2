@@ -36,13 +36,11 @@ public class TouchJumpButton : MonoBehaviour
     //}
 
 
-
     void OnCollisionExit2D() //접촉하지 않았을때
     {
         is_onground = false;
     }
     
-
 
     public void IsClick()
     {

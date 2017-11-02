@@ -175,6 +175,11 @@ Prefab:
       propertyPath: m_Name
       value: broccoli (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 58516459303723118, guid: cf3dadc79db55d24283eb9a6168040dc,
+        type: 2}
+      propertyPath: m_Radius
+      value: 4.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf3dadc79db55d24283eb9a6168040dc, type: 2}
   m_IsPrefabParent: 0
@@ -2122,7 +2127,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 758044765}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1850283515}
+        m_MethodName: Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &758044765
@@ -4254,12 +4270,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1850283515}
+        m_MethodName: Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5315,6 +5331,8 @@ GameObject:
   - component: {fileID: 1850283509}
   - component: {fileID: 1850283513}
   - component: {fileID: 1850283514}
+  - component: {fileID: 1850283515}
+  - component: {fileID: 1850283516}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5436,6 +5454,28 @@ MonoBehaviour:
   WaitOnePanel: {fileID: 1672402745}
   WaitTwoPanel: {fileID: 1940598121}
   WaitThreePanel: {fileID: 944685472}
+--- !u!114 &1850283515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850283508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691fde71c14e37e4d99b37f721b03404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1850283516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850283508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d819fc5626a21e408bf10826fd0268f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1856792266
 Prefab:
   m_ObjectHideFlags: 0
@@ -5821,8 +5861,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Unpause
+      - m_Target: {fileID: 1850283516}
+        m_MethodName: Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

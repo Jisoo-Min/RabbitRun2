@@ -2701,7 +2701,7 @@ GameObject:
   - component: {fileID: 944685476}
   - component: {fileID: 944685475}
   m_Layer: 5
-  m_Name: WaitThreePanel
+  m_Name: Wait3Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4956,7 +4956,7 @@ GameObject:
   - component: {fileID: 1672402748}
   - component: {fileID: 1672402747}
   m_Layer: 5
-  m_Name: WaitOnePanel
+  m_Name: Wait1Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5687,7 +5687,7 @@ GameObject:
   - component: {fileID: 1940598125}
   - component: {fileID: 1940598124}
   m_Layer: 5
-  m_Name: WaitTwoPanel
+  m_Name: Wait2Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

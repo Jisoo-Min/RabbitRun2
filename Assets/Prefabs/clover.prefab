@@ -9,23 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1949031849022518}
+  m_RootGameObject: {fileID: 1637009005326804}
   m_IsPrefabParent: 1
---- !u!1 &1949031849022518
+--- !u!1 &1637009005326804
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4946824063455448}
-  - component: {fileID: 212282028282859662}
-  - component: {fileID: 114436426680685098}
-<<<<<<< HEAD
-  - component: {fileID: 58954267419144524}
-=======
-  - component: {fileID: 58072078675908390}
->>>>>>> 81055f9ee1440beabe085ef3f200578fac41b86d
+  - component: {fileID: 4376572324155576}
+  - component: {fileID: 212169385789853952}
+  - component: {fileID: 114075231849520398}
+  - component: {fileID: 58978999373122344}
   m_Layer: 0
   m_Name: clover
   m_TagString: clover
@@ -33,50 +29,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4946824063455448
+--- !u!4 &4376572324155576
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949031849022518}
+  m_GameObject: {fileID: 1637009005326804}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.36, y: 1.89, z: 0}
-  m_LocalScale: {x: 0.30082324, y: 0.32303873, z: 1}
+  m_LocalPosition: {x: 40.98, y: -3.38, z: 0}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 0.50990486}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!58 &58954267419144524
-=======
---- !u!58 &58072078675908390
->>>>>>> 81055f9ee1440beabe085ef3f200578fac41b86d
+--- !u!58 &58978999373122344
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949031849022518}
+  m_GameObject: {fileID: 1637009005326804}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-<<<<<<< HEAD
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5.335
-=======
-  m_Offset: {x: 0, y: 0.15}
-  serializedVersion: 2
-  m_Radius: 5.6
->>>>>>> 81055f9ee1440beabe085ef3f200578fac41b86d
---- !u!114 &114436426680685098
+--- !u!114 &114075231849520398
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949031849022518}
+  m_GameObject: {fileID: 1637009005326804}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f405e38149d4a8d4cba7544cb82e8460, type: 3}
@@ -84,12 +70,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cloverSpeed: 5
   outOfRangeX: -12
---- !u!212 &212282028282859662
+--- !u!212 &212169385789853952
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949031849022518}
+  m_GameObject: {fileID: 1637009005326804}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

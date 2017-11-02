@@ -15,17 +15,7 @@ public class PauseGame : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Time.timeScale = 0;
-        wait1.SetActive(true);
-        new WaitForSeconds(1.0f);
-        wait1.SetActive(false);
-        wait2.SetActive(true);
-        new WaitForSeconds(1.0f);
-        wait2.SetActive(false);
-        wait3.SetActive(true);
-        new WaitForSeconds(1.0f);
-        wait3.SetActive(false);
-        Time.timeScale = 1;
+
         pausePanel.SetActive(false);
         resultPanel.SetActive(false);
 

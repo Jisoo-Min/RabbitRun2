@@ -11,14 +11,9 @@ public class Character : MonoBehaviour {
     public int score = 0;
     public int coin = 0;
     public Text textScore;
-<<<<<<< HEAD
-    
-    MoveFoodCarrot ca;
-=======
     public Text textCoin;
     public Text resultScore;
 
->>>>>>> df8519531350fb2e1ff0b2fa6beec4b1cc771b35
 
     public static bool checkClick = false;
 

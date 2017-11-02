@@ -1708,7 +1708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &634261945
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4403,7 +4403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1622429865
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5074,12 +5074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125215642f4a39a4a9de86b0a99e74e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausePanel: {fileID: 1622429864}
-  pauseButton: {fileID: 199765169}
-  resultPanel: {fileID: 634261944}
-  wait1: {fileID: 0}
-  wait2: {fileID: 0}
-  wait3: {fileID: 0}
 --- !u!1001 &1856792266
 Prefab:
   m_ObjectHideFlags: 0

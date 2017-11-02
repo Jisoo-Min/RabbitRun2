@@ -21,7 +21,11 @@ GameObject:
   - component: {fileID: 4946824063455448}
   - component: {fileID: 212282028282859662}
   - component: {fileID: 114436426680685098}
+<<<<<<< HEAD
   - component: {fileID: 58954267419144524}
+=======
+  - component: {fileID: 58072078675908390}
+>>>>>>> 81055f9ee1440beabe085ef3f200578fac41b86d
   m_Layer: 0
   m_Name: clover
   m_TagString: clover
@@ -42,7 +46,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!58 &58954267419144524
+=======
+--- !u!58 &58072078675908390
+>>>>>>> 81055f9ee1440beabe085ef3f200578fac41b86d
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -54,9 +62,15 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< HEAD
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5.335
+=======
+  m_Offset: {x: 0, y: 0.15}
+  serializedVersion: 2
+  m_Radius: 5.6
+>>>>>>> 81055f9ee1440beabe085ef3f200578fac41b86d
 --- !u!114 &114436426680685098
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4785369347592230}
   - component: {fileID: 212399551028255650}
   - component: {fileID: 114899507535089230}
+  - component: {fileID: 58799517997425178}
   m_Layer: 0
   m_Name: coin
   m_TagString: coin
@@ -41,6 +42,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58799517997425178
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231019046431240}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.15}
+  serializedVersion: 2
+  m_Radius: 3
 --- !u!114 &114899507535089230
 MonoBehaviour:
   m_ObjectHideFlags: 1

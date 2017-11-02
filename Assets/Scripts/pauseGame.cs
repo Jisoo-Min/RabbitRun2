@@ -7,11 +7,7 @@ public class PauseGame : MonoBehaviour
     public GameObject pausePanel;
     public GameObject pauseButton;
     public GameObject resultPanel;
-
-    public GameObject wait1;
-    public GameObject wait2;
-    public GameObject wait3;
-
+    
     // Use this for initialization
     void Start()
     {

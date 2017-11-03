@@ -7,6 +7,7 @@ public class Character : MonoBehaviour {
     public GameObject resultPanel;
     private float jump = 8;
     private int jump_number;
+    public int slide_number=0;
     private bool is_onground;
     public int score = 0;
     public int coin = 0;
@@ -16,13 +17,15 @@ public class Character : MonoBehaviour {
 
     public static bool checkClick = false;
     public static bool slideClick = false;
-    public GameObject rabbit_slide;
-    public GameObject running_rabbit1;
+
+
+    public Sprite rabbit1;
+    public Sprite rabbit2;
 
     void Start()
     {
-        rabbit_slide.SetActive(false);
-        running_rabbit1.SetActive(true);
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = rabbit1;
+      
     }
 
     void OnTriggerEnter2D(Collider2D item)   // 당근을 먹었을 때
@@ -89,12 +92,19 @@ public class Character : MonoBehaviour {
     void Update()
     {
         Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
-
-        if (slideClick==true)             //화면의 왼쪽이 클릭되었을때
+        
+        if (slideClick == true)             //화면의 왼쪽이 클릭되었을때
         {
-            rabbit_slide.SetActive(true);
-        }
+            ++slide_number;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = rabbit2;
 
+            if(slide_number>1)
+            {
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = rabbit1;
+                slide_number = 0;
+            }
+           
+        }
         slideClick = false;
 
         if (checkClick == true) // 화면이 클릭되었을때

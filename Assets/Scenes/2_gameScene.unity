@@ -872,13 +872,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resultPanel: {fileID: 634261944}
+  slide_number: 0
   score: 0
   coin: 0
   textScore: {fileID: 24891905}
   textCoin: {fileID: 374220835}
   resultScore: {fileID: 70171311}
-  rabbit_slide: {fileID: 0}
-  running_rabbit1: {fileID: 0}
+  rabbit1: {fileID: 21300000, guid: 3dfbe8a565b767e44a8072b3c394e229, type: 3}
+  rabbit2: {fileID: 21300000, guid: 01cef2d8ff2098d499b22f35e67b269a, type: 3}
 --- !u!1001 &139848004
 Prefab:
   m_ObjectHideFlags: 0
@@ -2187,7 +2188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &693159929
 Transform:
   m_ObjectHideFlags: 0
@@ -2255,13 +2256,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resultPanel: {fileID: 0}
+  slide_number: 0
   score: 0
   coin: 0
   textScore: {fileID: 0}
   textCoin: {fileID: 0}
   resultScore: {fileID: 0}
-  rabbit_slide: {fileID: 0}
-  running_rabbit1: {fileID: 0}
+  rabbit1: {fileID: 0}
+  rabbit2: {fileID: 0}
 --- !u!1001 &703415202
 Prefab:
   m_ObjectHideFlags: 0
@@ -4340,7 +4342,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 132549048}
+      - m_Target: {fileID: 693159931}
         m_MethodName: SlideButtonClick
         m_Mode: 1
         m_Arguments:

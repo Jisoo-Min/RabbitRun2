@@ -14,12 +14,15 @@ public class Character : MonoBehaviour {
     public Text textCoin;
     public Text resultScore;
 
-
     public static bool checkClick = false;
+    public static bool slideClick = false;
+    public GameObject rabbit_slide;
+    public GameObject running_rabbit1;
 
     void Start()
     {
-        
+        rabbit_slide.SetActive(false);
+        running_rabbit1.SetActive(true);
     }
 
     void OnTriggerEnter2D(Collider2D item)   // 당근을 먹었을 때
@@ -73,7 +76,12 @@ public class Character : MonoBehaviour {
         is_onground = false;
     }
     
-    public void IsClick()
+    public void SlideButtonClick()      //화면의 왼쪽 클릭
+    {
+        slideClick = true;
+    }
+
+    public void IsClick()             //화면의 오른쪽 클릭
     {
         checkClick = true;
     }
@@ -81,6 +89,13 @@ public class Character : MonoBehaviour {
     void Update()
     {
         Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+
+        if (slideClick==true)             //화면의 왼쪽이 클릭되었을때
+        {
+            rabbit_slide.SetActive(true);
+        }
+
+        slideClick = false;
 
         if (checkClick == true) // 화면이 클릭되었을때
         {
@@ -110,8 +125,10 @@ public class Character : MonoBehaviour {
         }
 
         checkClick = false;
+    
     }
 
+ 
 
 
 

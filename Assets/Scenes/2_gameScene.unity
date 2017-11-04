@@ -716,9 +716,6 @@ GameObject:
   - component: {fileID: 132549044}
   - component: {fileID: 132549043}
   - component: {fileID: 132549042}
-  - component: {fileID: 132549046}
-  - component: {fileID: 132549041}
-  - component: {fileID: 132549047}
   - component: {fileID: 132549048}
   m_Layer: 0
   m_Name: running_rabbit1
@@ -727,17 +724,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &132549041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 132549040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3842fa9d6e54bf1459f0c44a4ba1a47c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &132549042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -838,28 +824,6 @@ Transform:
   m_Father: {fileID: 1453085242}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &132549046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 132549040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f561e4e6098266143afe25b1e3577209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &132549047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 132549040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3842fa9d6e54bf1459f0c44a4ba1a47c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &132549048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3662,6 +3626,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1850283513}
         m_MethodName: Unpause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1850283513}
+        m_MethodName: ClickRetry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7017,6 +6992,9 @@ MonoBehaviour:
   pausePanel: {fileID: 1622429864}
   pauseButton: {fileID: 199765169}
   resultPanel: {fileID: 634261944}
+  WaitOnePanel: {fileID: 1672402745}
+  WaitTwoPanel: {fileID: 1940598121}
+  WaitThreePanel: {fileID: 944685472}
 --- !u!114 &1850283514
 MonoBehaviour:
   m_ObjectHideFlags: 0

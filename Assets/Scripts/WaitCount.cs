@@ -21,7 +21,11 @@ public class WaitCount : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        Wait();
+       
+    }
+    public void Wait()
+    {
         //게임 시작시 정지
         if (Timer == 0)
         {
@@ -58,7 +62,6 @@ public class WaitCount : MonoBehaviour {
             }
         }
     }
-
     IEnumerator LoadingEnd()
     {
 

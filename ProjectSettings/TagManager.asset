@@ -12,6 +12,7 @@ TagManager:
   - clover
   - corn
   - broccoli
+  - rabbit
   layers:
   - Default
   - TransparentFX

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4519259938636204}
   - component: {fileID: 212859089696712936}
   - component: {fileID: 114746173568764980}
-  - component: {fileID: 65768928504278974}
+  - component: {fileID: 70346532673611084}
   m_Layer: 0
   m_Name: hook
   m_TagString: obstacle
@@ -42,18 +42,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &65768928504278974
-BoxCollider:
+--- !u!70 &70346532673611084
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210097045518804}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.94, y: 10.67, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 3.94, y: 10.67}
+  m_Direction: 0
 --- !u!114 &114746173568764980
 MonoBehaviour:
   m_ObjectHideFlags: 1

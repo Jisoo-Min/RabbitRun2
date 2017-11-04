@@ -57,7 +57,14 @@ public class Character : MonoBehaviour {
             Destroy(item.gameObject);
             score += 200;
         }
-        textScore.text = score.ToString();
+        textScore.text = score.ToString();  //먹이에 따라서 text UI 업데이트
+
+
+        if((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook"))
+        {
+            iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.5f));
+        }
+
     }
 
     void OnCollisionEnter2D(Collision2D collision) //접촉했을때

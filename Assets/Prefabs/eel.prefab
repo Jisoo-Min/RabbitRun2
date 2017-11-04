@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61409283202705858}
   m_Layer: 0
   m_Name: eel
-  m_TagString: obstacle
+  m_TagString: eel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

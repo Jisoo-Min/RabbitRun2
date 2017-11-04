@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61024912265714494}
   m_Layer: 0
   m_Name: seaweed
-  m_TagString: obstacle
+  m_TagString: seaweed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

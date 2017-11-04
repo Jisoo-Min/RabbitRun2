@@ -5,15 +5,18 @@ using UnityEngine.UI;
 
 public class Character : MonoBehaviour {
     public GameObject resultPanel;
+    public Text textScore;
+    public Text textCoin;
+    public Text resultScore;
+    public Slider slider;
     private float jump = 8;
     private int jump_number;
     public int slide_number=0;
     private bool is_onground;
+
     public int score = 0;
     public int coin = 0;
-    public Text textScore;
-    public Text textCoin;
-    public Text resultScore;
+  
 
     public static bool checkClick = false;
     public static bool slideClick = false;
@@ -24,6 +27,7 @@ public class Character : MonoBehaviour {
 
     void Start()
     {
+        slider.value = 100.0f;
         this.gameObject.GetComponent<SpriteRenderer>().sprite = rabbit1;
       
     }
@@ -63,6 +67,7 @@ public class Character : MonoBehaviour {
         if((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook"))
         {
             iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.5f));
+            slider.value = slider.value - 5.0f;
         }
 
     }

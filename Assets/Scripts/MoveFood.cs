@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveFoodBroccoli : MonoBehaviour
+public class MoveFood: MonoBehaviour
 {
-    public float broccoliSpeed;
+    public float speed;
     public float outOfRangeX;
     // Use this for initialization
     void Start()
@@ -15,7 +15,7 @@ public class MoveFoodBroccoli : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left * broccoliSpeed * Time.deltaTime);
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
 
         if (this.transform.position.x < outOfRangeX)
         {

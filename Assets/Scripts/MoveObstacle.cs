@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveObstacleSeaweed : MonoBehaviour {
+public class MoveObstacle : MonoBehaviour {
 
-    public float seaweedSpeed;
+    public float speed;
     public float outOfRangeX;
     //float timeSpeed = 0f;
 	// Use this for initialization
@@ -14,13 +14,8 @@ public class MoveObstacleSeaweed : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        //timeSpeed += Time.deltaTime;
-        //if (timeSpeed > 2f)
-        //{
-        //    transform.position = new Vector3(6f, 0f, 0);
-        //    timeSpeed = 0f;
-        //}
-        transform.Translate(Vector3.left * seaweedSpeed * Time.deltaTime);
+        
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         if (this.transform.position.x < outOfRangeX)
         {

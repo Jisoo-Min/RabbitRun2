@@ -26,16 +26,17 @@ public class GameManager : MonoBehaviour {
     public Text textCoin;
     public Slider slider;
 
+    //game ready : ready = true , end = false;
+    //game play :  ready = false, end = false;
+    //game end  :  ready = false, end = true;
     public bool ready = true; //게임 종료를 구분
     public bool end = false;
 
     private int score = 0;
     private int coin = 0;
 
+    
 
-    //game ready : ready = true , end = false;
-    //game play :  ready = false, end = false;
-    //game end  :  ready = false, end = true;
     // Use this for initialization
     void Start () {
         manager = this;
@@ -148,8 +149,7 @@ public class GameManager : MonoBehaviour {
         }
     }
     IEnumerator LoadingEnd()
-    {
-
+    { 
         yield return new WaitForSeconds(1.0f);
     }
 }

@@ -65,10 +65,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1406874879993676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f85936d3a6a144e84a05c9182c8d1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 31a8445c6ada6134ca657633100ba9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  broccoliSpeed: 5
+  speed: 5
   outOfRangeX: -12
 --- !u!212 &212802979269765426
 SpriteRenderer:

@@ -21,16 +21,25 @@ public class GameManager : MonoBehaviour {
     public GameObject WaitTwoPanel;
     public GameObject WaitThreePanel;
 
+    public Text resultScore;
+    public Text textScore;
+    public Text textCoin;
+    public Slider slider;
+
     public bool ready = true; //게임 종료를 구분
     public bool end = false;
+
+    private int score = 0;
+    public int coin = 0;
+
 
     //game ready : ready = true , end = false;
     //game play :  ready = false, end = false;
     //game end  :  ready = false, end = true;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         manager = this;
-
+        slider.value = Character.character.health; //체력값 
         Timer = 0;
         WaitOnePanel.SetActive(false);
         WaitTwoPanel.SetActive(false);
@@ -43,6 +52,8 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        slider.value = Character.character.health; //체력 지속적으로 업데이트
+        textScore.text = GetScore();  //먹이에 따라서 text UI 업데이트
         Wait();
 		if(ready ==true)
         {
@@ -57,10 +68,21 @@ public class GameManager : MonoBehaviour {
     public void GameOver()
     {
         end = true;
+        resultScore.text = GetScore();
+        
         resultPanel.SetActive(true);
         pausePanel.SetActive(false);//일시정지 패널에서 나갈경우 이 패널을 비활성화
         iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.0, "y", 0.0, "time", 0.0f)); //장애물에 충돌된 상태였을 경우 화면 흔들림 방지 
         Time.timeScale = 0; //화면정지
+    }
+
+    public void SetScore(int inputScore)
+    {
+        score = inputScore;
+    }
+    public string GetScore()
+    {
+        return score.ToString();
     }
 
 

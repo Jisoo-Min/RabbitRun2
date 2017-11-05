@@ -4,21 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Character : MonoBehaviour {
-    public GameObject resultPanel;
-    public Text textScore;
-    public Text textCoin;
-    public Text resultScore;
-    public Slider slider;
+
     private float jump = 8;
     public float health = 100;
     private int jump_number;
     public int slide_number=0;
     private bool is_onground;
 
-    public int score = 0;
-    public int coin = 0;
-  
-
+ 
     public static bool checkClick = false;
     public static bool slideClick = false;
 
@@ -30,7 +23,7 @@ public class Character : MonoBehaviour {
     void Start()
     {
         character = this;
-        slider.value = 100.0f;
+        
         this.gameObject.GetComponent<SpriteRenderer>().sprite = rabbit1;
       
     }
@@ -71,7 +64,6 @@ public class Character : MonoBehaviour {
         {
             iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.1f));
             health = health - 50.0f;
-            slider.value = health;
         }
 
     }
@@ -83,10 +75,7 @@ public class Character : MonoBehaviour {
 
         if(collision.gameObject.name == "deadline")//죽는 라인에 충돌할 경우 게임 중지 
         {
-            Destroy(collision.gameObject);
-            Time.timeScale = 0;
-            resultScore.text = score.ToString();
-            resultPanel.SetActive(true);
+            GameManager.manager.GameOver();            
         }
     }
 

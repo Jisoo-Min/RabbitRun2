@@ -872,13 +872,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resultPanel: {fileID: 634261944}
-  score: 0
-  coin: 0
   textScore: {fileID: 24891905}
   textCoin: {fileID: 374220835}
   resultScore: {fileID: 70171311}
-  rabbit_slide: {fileID: 0}
-  running_rabbit1: {fileID: 0}
+  slider: {fileID: 0}
+  slide_number: 0
+  score: 0
+  coin: 0
+  rabbit1: {fileID: 0}
+  rabbit2: {fileID: 0}
 --- !u!1001 &139848004
 Prefab:
   m_ObjectHideFlags: 0
@@ -2852,13 +2854,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resultPanel: {fileID: 0}
-  score: 0
-  coin: 0
   textScore: {fileID: 0}
   textCoin: {fileID: 0}
   resultScore: {fileID: 0}
-  rabbit_slide: {fileID: 0}
-  running_rabbit1: {fileID: 0}
+  slider: {fileID: 0}
+  slide_number: 0
+  score: 0
+  coin: 0
+  rabbit1: {fileID: 0}
+  rabbit2: {fileID: 0}
 --- !u!212 &817920261
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6985,6 +6989,9 @@ MonoBehaviour:
   pausePanel: {fileID: 1622429864}
   pauseButton: {fileID: 199765169}
   resultPanel: {fileID: 634261944}
+  WaitOnePanel: {fileID: 1672402745}
+  WaitTwoPanel: {fileID: 1940598121}
+  WaitThreePanel: {fileID: 944685472}
 --- !u!114 &1850283514
 MonoBehaviour:
   m_ObjectHideFlags: 0

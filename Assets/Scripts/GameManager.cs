@@ -1,39 +1,68 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PauseGame : MonoBehaviour
-{
+/**************************************************
+ * GameManager : 게임 시작 시 준비메시지 표시
+ * 게임의 준비, 종료, 시작 처리 ( 게임의 전반적인 동작 관리)            
+ * ************************************************/
+public class GameManager : MonoBehaviour {
+
+    public float waitingTime = 3.0f;
+    public static GameManager manager;
+
+    public GameObject resultPanel;
     public GameObject pausePanel;
     public GameObject pauseButton;
-    
 
     private int Timer = 0;
-
     public GameObject WaitOnePanel;
     public GameObject WaitTwoPanel;
     public GameObject WaitThreePanel;
 
+    public bool ready = true; //게임 종료를 구분
+    public bool end = false;
 
-    // Use this for initialization
-    void Start()
-    {
-
-        pausePanel.SetActive(false); //해당 Panel을 비활성화
-      
+    //game ready : ready = true , end = false;
+    //game play :  ready = false, end = false;
+    //game end  :  ready = false, end = true;
+	// Use this for initialization
+	void Start () {
+        manager = this;
 
         Timer = 0;
-
         WaitOnePanel.SetActive(false);
         WaitTwoPanel.SetActive(false);
         WaitThreePanel.SetActive(true);
+
+        pausePanel.SetActive(false); //해당 Panel을 비활성화
+        resultPanel.SetActive(false);
+        Wait();
+    }
+	
+	// Update is called once per frame
+	void Update () {
+        Wait();
+		if(ready ==true)
+        {
+            ready = false;
+            Character.character.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1; //
+        }
+        if(Character.character.health == 0) //체력이 0일때 게임 중지 
+        {
+            GameOver();
+        }
+	}
+    public void GameOver()
+    {
+        end = true;
+        resultPanel.SetActive(true);
+        pausePanel.SetActive(false);//일시정지 패널에서 나갈경우 이 패널을 비활성화
+        iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.0, "y", 0.0, "time", 0.0f)); //장애물에 충돌된 상태였을 경우 화면 흔들림 방지 
+        Time.timeScale = 0; //화면정지
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-         
-    }
 
     public void Pause()
     {
@@ -50,6 +79,7 @@ public class PauseGame : MonoBehaviour
     public void Unpause()
     {
         Time.timeScale = 1; //화면 정지 해제
+        Timer = 0; //일시정지를 해제 했으므로 timer을 0으로 재설정 
         pauseButton.SetActive(true);
         pausePanel.SetActive(false);
     }

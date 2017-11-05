@@ -7,9 +7,9 @@ public class Character : MonoBehaviour {
 
     private float jump = 8;
     public float health = 100;
-    private int jump_number;
-    public int slide_number=0;
-    private bool is_onground;
+    private int jumpNumber;
+    public int slideNumber=0;
+    private bool isOnground;
 
  
     public static bool checkClick = false;
@@ -70,8 +70,8 @@ public class Character : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision) //접촉했을때
     {
-        jump_number = 0;
-        is_onground = true;
+        jumpNumber = 0;
+        isOnground = true;
 
         if(collision.gameObject.name == "deadline")//죽는 라인에 충돌할 경우 게임 중지 
         {
@@ -81,7 +81,7 @@ public class Character : MonoBehaviour {
 
     void OnCollisionExit2D() //접촉하지 않았을때
     {
-        is_onground = false;
+        isOnground = false;
     }
     
     public void SlideButtonClick()      //화면의 왼쪽 클릭
@@ -102,13 +102,13 @@ public class Character : MonoBehaviour {
 
             if (slideClick == true)             //화면의 왼쪽이 클릭되었을때
             {
-                ++slide_number;
+                ++slideNumber;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = rabbit2;
 
-                if (slide_number > 1)
+                if (slideNumber > 1)
                 {
                     this.gameObject.GetComponent<SpriteRenderer>().sprite = rabbit1;
-                    slide_number = 0;
+                    slideNumber = 0;
                 }
 
             }
@@ -116,23 +116,23 @@ public class Character : MonoBehaviour {
 
             if (checkClick == true) // 화면이 클릭되었을때
             {
-                ++jump_number;
-                Debug.Log(jump_number);
+                ++jumpNumber;
+                Debug.Log(jumpNumber);
 
-                if (is_onground == true) //땅에 있을때
+                if (isOnground == true) //땅에 있을때
                 {
 
                     rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump);
 
                 }
 
-                else if (is_onground == false) //점프중일때
+                else if (isOnground == false) //점프중일때
                 {
-                    if (jump_number <= 2)
+                    if (jumpNumber <= 2)
                         rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump);
 
 
-                    if (jump_number > 2) //점프횟수가 2번이 넘었을때
+                    if (jumpNumber > 2) //점프횟수가 2번이 넘었을때
                     {
                         //rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
 

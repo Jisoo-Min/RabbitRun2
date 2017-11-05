@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour {
     public bool end = false;
 
     private int score = 0;
-    public int coin = 0;
+    private int coin = 0;
 
 
     //game ready : ready = true , end = false;
@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         manager = this;
-        slider.value = Character.character.health; //체력값 
         Timer = 0;
         WaitOnePanel.SetActive(false);
         WaitTwoPanel.SetActive(false);
@@ -47,13 +46,14 @@ public class GameManager : MonoBehaviour {
 
         pausePanel.SetActive(false); //해당 Panel을 비활성화
         resultPanel.SetActive(false);
-        Wait();
+       
     }
 	
 	// Update is called once per frame
 	void Update () {
         slider.value = Character.character.health; //체력 지속적으로 업데이트
-        textScore.text = GetScore();  //먹이에 따라서 text UI 업데이트
+        textScore.text = score.ToString(); //먹이에 따라서 text UI 업데이트
+        textCoin.text = coin.ToString();
         Wait();
 		if(ready ==true)
         {
@@ -76,15 +76,18 @@ public class GameManager : MonoBehaviour {
         Time.timeScale = 0; //화면정지
     }
 
-    public void SetScore(int inputScore)
+    public void AddScore(int inputScore)
     {
-        score = inputScore;
+        score += inputScore;
     }
     public string GetScore()
     {
         return score.ToString();
     }
-
+    public void AddCoin(int inputCoin)
+    {
+        coin += inputCoin;
+    }
 
     public void Pause()
     {

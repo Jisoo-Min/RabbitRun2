@@ -33,31 +33,31 @@ public class Character : MonoBehaviour {
         if (item.tag == "carrot") //기본먹이
         {
             Destroy(item.gameObject);
-            score += 100;
+            GameManager.manager.AddScore(100);
            
         }
         else if(item.tag == "coin")
         {
             Destroy(item.gameObject);
-            ++coin;
-            textCoin.text = coin.ToString();
+            GameManager.manager.AddCoin(1);
+            
         }
         else if (item.tag == "broccoli") //크기증가먹이
         {
             Destroy(item.gameObject);
-            score += 200; 
+            GameManager.manager.AddScore(200); 
         }
         else if (item.tag =="corn") //크기감소먹이
         {
             Destroy(item.gameObject);
-            score += 30;
+            GameManager.manager.AddScore(30);
         }
         else if(item.tag =="clover")//속도 증가먹이
         {
             Destroy(item.gameObject);
-            score += 200;
+            GameManager.manager.AddScore(200);
         }
-        textScore.text = score.ToString();  //먹이에 따라서 text UI 업데이트
+        
 
 
         if((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook"))

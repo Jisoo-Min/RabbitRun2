@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/1_home.unity
     guid: 33755b710f4082046bb9a10b8a5a6158
   - enabled: 0
-    path: Assets/Scenes/2_playGame.unity
+    path: 
     guid: e855aeb41ea9d474387f2470843f2a15
-  - enabled: 1
-    path: Assets/Scenes/2_gameScene.unity
+  - enabled: 0
+    path: 
     guid: 56d53e7ccdc48c74aa8ba553a26424c6
+  - enabled: 1
+    path: Assets/Scenes/2_game.unity
+    guid: 44addef45c6316f4eb62f1a763165cd2
   - enabled: 1
     path: Assets/Scenes/2_2_store.unity
     guid: e7806dd63ab1635489ca466859320225

@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Character : MonoBehaviour {
+public class Character : MonoBehaviour
+{
 
     private float jump = 8;
     public float health = 100;
@@ -13,8 +15,7 @@ public class Character : MonoBehaviour {
 
  
     public static bool checkClick = false;
-    public static bool slideClick = false;
-
+  
     public static Character character;
 
     public Sprite rabbit1;
@@ -23,8 +24,6 @@ public class Character : MonoBehaviour {
     void Start()
     {
         character = this;
-        
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = rabbit1;
       
     }
 
@@ -57,13 +56,11 @@ public class Character : MonoBehaviour {
             Destroy(item.gameObject);
             GameManager.manager.AddScore(200);
         }
-        
-
 
         if((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook"))
         {
             iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.1f));
-            health = health - 50.0f;
+            health = health - 20.0f;
         }
 
     }
@@ -83,36 +80,29 @@ public class Character : MonoBehaviour {
     {
         isOnground = false;
     }
-    
-    public void SlideButtonClick()      //화면의 왼쪽 클릭
-    {
-        slideClick = true;
-    }
 
     public void IsClick()             //화면의 오른쪽 클릭
     {
         checkClick = true;
     }
 
+    public void PointerDown()      //slideButton 클릭했을때
+    {
+        GetComponent<SpriteRenderer>().sprite = rabbit2;
+    }
+    public void PointerUp()           //slideButton 클릭을 안했을때
+    {
+        GetComponent<SpriteRenderer>().sprite = rabbit1;
+    }
+
     void Update()
     {
+        
         if (GameManager.manager.end == false) //end가 false 일 경우만 점프가능
         {
             Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
 
-            if (slideClick == true)             //화면의 왼쪽이 클릭되었을때
-            {
-                ++slideNumber;
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = rabbit2;
-
-                if (slideNumber > 1)
-                {
-                    this.gameObject.GetComponent<SpriteRenderer>().sprite = rabbit1;
-                    slideNumber = 0;
-                }
-
-            }
-            slideClick = false;
+            
 
             if (checkClick == true) // 화면이 클릭되었을때
             {

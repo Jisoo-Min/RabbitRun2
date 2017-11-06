@@ -77,7 +77,7 @@ public class Character : MonoBehaviour {
 
     }
 
-    void SetSpeed()
+    void SetNormal()
     {
         MoveFood.foodSpeed = 5;
         MoveObstacle.obstacleSpeed = 5;

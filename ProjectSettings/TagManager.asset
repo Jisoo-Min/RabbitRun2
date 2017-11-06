@@ -18,6 +18,7 @@ TagManager:
   - seashell
   - seaweed
   - hook
+  - goal
   layers:
   - Default
   - TransparentFX

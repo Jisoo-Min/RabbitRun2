@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveGround : MonoBehaviour {
 
-    public float groundSpeed;
+    public static float groundSpeed = 5;
     public float outOfRangeX;
     //float timeSpeed = 0f;
 	// Use this for initialization

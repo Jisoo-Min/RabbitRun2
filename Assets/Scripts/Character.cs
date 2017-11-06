@@ -44,17 +44,27 @@ public class Character : MonoBehaviour
         else if (item.tag == "broccoli") //크기증가먹이
         {
             Destroy(item.gameObject);
-            GameManager.manager.AddScore(200); 
+            GameManager.manager.AddScore(200);
+            Character.character.transform.localScale = new Vector2(0.4f,0.4f);
+            Invoke("SetNormal", 3);
         }
         else if (item.tag =="corn") //크기감소먹이
         {
             Destroy(item.gameObject);
             GameManager.manager.AddScore(30);
+            transform.localScale = new Vector2(0.2f, 0.15f);
+            Invoke("SetNormal", 3);
         }
         else if(item.tag =="clover")//속도 증가먹이
         {
-            Destroy(item.gameObject);
             GameManager.manager.AddScore(200);
+            Destroy(item.gameObject);
+
+            MoveFood.foodSpeed = 10;
+            MoveObstacle.obstacleSpeed = 10;
+            MoveGround.groundSpeed = 10;
+            Invoke("SetNormal", 3);
+            
         }
 
         if((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook"))
@@ -65,6 +75,15 @@ public class Character : MonoBehaviour
 
     }
 
+    void SetNormal()
+    {
+        MoveFood.foodSpeed = 5;
+        MoveObstacle.obstacleSpeed = 5;
+        MoveGround.groundSpeed = 5;
+        transform.localScale = new Vector2(0.3f, 0.26f);
+
+
+    }
     void OnCollisionEnter2D(Collision2D collision) //접촉했을때
     {
         jumpNumber = 0;

@@ -45,7 +45,9 @@ public class Character : MonoBehaviour {
         else if (item.tag == "broccoli") //크기증가먹이
         {
             Destroy(item.gameObject);
-            GameManager.manager.AddScore(200); 
+            GameManager.manager.AddScore(200);
+            transform.localScale = new Vector2(0.4f,0.4f);
+            Invoke("SetNormal", 3);
         }
         else if (item.tag =="corn") //크기감소먹이
         {

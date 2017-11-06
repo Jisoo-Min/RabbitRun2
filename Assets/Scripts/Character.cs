@@ -56,11 +56,15 @@ public class Character : MonoBehaviour {
         }
         else if(item.tag =="clover")//속도 증가먹이
         {
+            GameManager.manager.AddScore(200);
             Destroy(item.gameObject);
+
             MoveFood.foodSpeed = 10;
             MoveObstacle.obstacleSpeed = 10;
             MoveGround.groundSpeed = 10;
-            GameManager.manager.AddScore(200);
+
+            Invoke("SetNormal", 3);
+            
         }
         
 
@@ -73,6 +77,15 @@ public class Character : MonoBehaviour {
 
     }
 
+    void SetSpeed()
+    {
+        MoveFood.foodSpeed = 5;
+        MoveObstacle.obstacleSpeed = 5;
+        MoveGround.groundSpeed = 5;
+        transform.localScale = new Vector2(0.3f, 0.26f);
+
+
+    }
     void OnCollisionEnter2D(Collision2D collision) //접촉했을때
     {
         jumpNumber = 0;

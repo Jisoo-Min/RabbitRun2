@@ -55,6 +55,9 @@ public class Character : MonoBehaviour {
         else if(item.tag =="clover")//속도 증가먹이
         {
             Destroy(item.gameObject);
+            MoveFood.foodSpeed = 10;
+            MoveObstacle.obstacleSpeed = 10;
+            MoveGround.groundSpeed = 10;
             GameManager.manager.AddScore(200);
         }
         

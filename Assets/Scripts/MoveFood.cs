@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveFood: MonoBehaviour
 {
-    public float speed;
+    public static float foodSpeed = 5;
     public float outOfRangeX;
     // Use this for initialization
     void Start()
@@ -15,7 +15,7 @@ public class MoveFood: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
+        transform.Translate(Vector3.left * foodSpeed * Time.deltaTime);
 
         if (this.transform.position.x < outOfRangeX)
         {

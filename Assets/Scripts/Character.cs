@@ -74,7 +74,7 @@ public class Character : MonoBehaviour {
         if((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook"))
         {
             iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.1f));
-            health = health - 50.0f;
+            health = health - 20.0f;
         }
 
     }

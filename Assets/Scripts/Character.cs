@@ -64,7 +64,6 @@ public class Character : MonoBehaviour {
             MoveFood.foodSpeed = 10;
             MoveObstacle.obstacleSpeed = 10;
             MoveGround.groundSpeed = 10;
-
             Invoke("SetNormal", 3);
             
         }

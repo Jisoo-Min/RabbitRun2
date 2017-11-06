@@ -12,6 +12,12 @@ TagManager:
   - clover
   - corn
   - broccoli
+  - rabbit
+  - eel
+  - crab
+  - seashell
+  - seaweed
+  - hook
   layers:
   - Default
   - TransparentFX

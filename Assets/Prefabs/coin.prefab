@@ -65,10 +65,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1231019046431240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1df8a9b7f7e466747b9ab77de3521d08, type: 3}
+  m_Script: {fileID: 11500000, guid: 31a8445c6ada6134ca657633100ba9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinSpeed: 5
+  speed: 5
   outOfRangeX: -12
 --- !u!212 &212399551028255650
 SpriteRenderer:

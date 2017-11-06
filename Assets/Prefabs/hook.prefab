@@ -21,10 +21,10 @@ GameObject:
   - component: {fileID: 4519259938636204}
   - component: {fileID: 212859089696712936}
   - component: {fileID: 114746173568764980}
-  - component: {fileID: 65768928504278974}
+  - component: {fileID: 61941767356281828}
   m_Layer: 0
   m_Name: hook
-  m_TagString: obstacle
+  m_TagString: hook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,18 +42,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &65768928504278974
-BoxCollider:
+--- !u!61 &61941767356281828
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210097045518804}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.94, y: 10.67}
+    newSize: {x: 3.94, y: 10.67}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.94, y: 10.67, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3, y: 9}
+  m_EdgeRadius: 0
 --- !u!114 &114746173568764980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -62,10 +75,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210097045518804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bf0ed1cfa71a204bbfe7adcbf557cb5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5143b61c7cc2e9246ab91f84d0af79d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hookSpeed: 5
+  speed: 5
   outOfRangeX: -19.2
 --- !u!212 &212859089696712936
 SpriteRenderer:

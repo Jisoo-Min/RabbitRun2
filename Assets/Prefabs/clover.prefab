@@ -65,10 +65,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1637009005326804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f405e38149d4a8d4cba7544cb82e8460, type: 3}
+  m_Script: {fileID: 11500000, guid: 31a8445c6ada6134ca657633100ba9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloverSpeed: 5
+  speed: 5
   outOfRangeX: -12
 --- !u!212 &212169385789853952
 SpriteRenderer:

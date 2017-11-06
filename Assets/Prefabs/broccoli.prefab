@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4739805156466282}
   - component: {fileID: 212802979269765426}
   - component: {fileID: 114535972519355370}
-  - component: {fileID: 58516459303723118}
+  - component: {fileID: 58776547354986740}
   m_Layer: 0
   m_Name: broccoli
   m_TagString: broccoli
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58516459303723118
+--- !u!58 &58776547354986740
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -56,7 +56,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.595
 --- !u!114 &114535972519355370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,10 +65,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1406874879993676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f85936d3a6a144e84a05c9182c8d1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 31a8445c6ada6134ca657633100ba9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  broccoliSpeed: 5
+  speed: 5
   outOfRangeX: -12
 --- !u!212 &212802979269765426
 SpriteRenderer:

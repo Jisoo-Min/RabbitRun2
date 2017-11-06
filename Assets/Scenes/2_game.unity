@@ -1034,7 +1034,7 @@ Transform:
   m_GameObject: {fileID: 132549040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -180.555, y: -203.764, z: 0}
-  m_LocalScale: {x: 0.3090091, y: 0.26655024, z: 0.4302519}
+  m_LocalScale: {x: 0.3, y: 0.26, z: 0.4302519}
   m_Children: []
   m_Father: {fileID: 1453085242}
   m_RootOrder: 0
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  slide_number: 0
+  slideNumber: 0
   rabbit1: {fileID: 21300000, guid: 3dfbe8a565b767e44a8072b3c394e229, type: 3}
   rabbit2: {fileID: 21300000, guid: 01cef2d8ff2098d499b22f35e67b269a, type: 3}
 --- !u!1001 &139848004
@@ -3807,7 +3807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  slide_number: 0
+  slideNumber: 0
   rabbit1: {fileID: 0}
   rabbit2: {fileID: 0}
 --- !u!1001 &703415202

@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour {
 
         pausePanel.SetActive(false); //해당 Panel을 비활성화
         resultPanel.SetActive(false);
-       
+        this.GetComponent<AudioSource>().Play();
     }
 	
 	// Update is called once per frame
@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour {
             ready = false;
             Character.character.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1; //
         }
+        
         if(Character.character.health == 0) //체력이 0일때 게임 중지 
         {
             GameOver();
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour {
 	}
     public void GameOver()
     {
+        this.GetComponent<AudioSource>().Stop();
         end = true;
         resultScore.text = GetScore();
         

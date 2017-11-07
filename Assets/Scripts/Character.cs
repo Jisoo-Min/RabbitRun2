@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
         {
             Destroy(item.gameObject);
             GameManager.manager.AddScore(100);
-           
+            this.GetComponent<AudioSource>().Play();
         }
         else if(item.tag == "coin")
         {
@@ -66,8 +66,8 @@ public class Character : MonoBehaviour
             Invoke("SetNormal", 3);
             
         }
-
-        if((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook"))
+        
+        if ((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook"))
         {
             iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.1f));
             health = health - 20.0f;

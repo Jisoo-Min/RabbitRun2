@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
         {
             Destroy(item.gameObject);
             GameManager.manager.AddScore(100);
-            
+           
         }
         else if(item.tag == "coin")
         {
@@ -66,13 +66,8 @@ public class Character : MonoBehaviour
             Invoke("SetNormal", 3);
             
         }
-<<<<<<< HEAD
-        
-        if ((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook"))
-=======
 
         if((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook") || (item.tag == "red_fish") || (item.tag == "yellow_fish") || (item.tag == "blue_fish") || (item.tag == "octopus"))
->>>>>>> 77509621cf8e28e63a2dbfefbce55a0604294db7
         {
             iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.1f));
             health = health - 20.0f;
@@ -94,7 +89,7 @@ public class Character : MonoBehaviour
         jumpNumber = 0;
         isOnground = true;
 
-        if(collision.gameObject.name == "deadline" || collision.gameObject.name=="turtle" )//죽는 라인에 충돌할 경우 게임 중지 
+        if(collision.gameObject.name == "deadline")//죽는 라인에 충돌할 경우 게임 중지 
         {
             GameManager.manager.GameOver();            
         }

@@ -19,6 +19,10 @@ TagManager:
   - seaweed
   - hook
   - goal
+  - yellow_fish
+  - red_fish
+  - octopus
+  - blue_fish
   layers:
   - Default
   - TransparentFX

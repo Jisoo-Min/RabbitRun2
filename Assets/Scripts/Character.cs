@@ -66,8 +66,13 @@ public class Character : MonoBehaviour
             Invoke("SetNormal", 3);
             
         }
+<<<<<<< HEAD
         
         if ((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook"))
+=======
+
+        if((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook") || (item.tag == "red_fish") || (item.tag == "yellow_fish") || (item.tag == "blue_fish") || (item.tag == "octopus"))
+>>>>>>> 77509621cf8e28e63a2dbfefbce55a0604294db7
         {
             iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.1f));
             health = health - 20.0f;

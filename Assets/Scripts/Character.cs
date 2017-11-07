@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
         {
             Destroy(item.gameObject);
             GameManager.manager.AddScore(100);
-            this.GetComponent<AudioSource>().Play();
+            
         }
         else if(item.tag == "coin")
         {

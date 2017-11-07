@@ -89,7 +89,7 @@ public class Character : MonoBehaviour
         jumpNumber = 0;
         isOnground = true;
 
-        if(collision.gameObject.name == "deadline" || collision.gameObject.name=="goal" )//죽는 라인에 충돌할 경우 게임 중지 
+        if(collision.gameObject.name == "deadline" || collision.gameObject.name=="turtle" )//죽는 라인에 충돌할 경우 게임 중지 
         {
             GameManager.manager.GameOver();            
         }

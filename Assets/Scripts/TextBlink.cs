@@ -7,10 +7,11 @@ using UnityEngine.EventSystems;
 public class TextBlink : MonoBehaviour {
 
     Text flashingText;
-	
+    
 	void Start () {
+        StopAllCoroutines();
         flashingText = GetComponent<Text>();
-        StartCoroutine(BlinkText());
+        StartCoroutine("BlinkText");
     }
 	
 	// Update is called once per frame
@@ -23,9 +24,9 @@ public class TextBlink : MonoBehaviour {
         while (true)
         {
             flashingText.text = "";
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(0.5f);
             flashingText.text = "시작하려면 터치하세요.";
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }

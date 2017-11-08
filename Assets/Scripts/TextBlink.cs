@@ -10,7 +10,7 @@ public class TextBlink : MonoBehaviour {
     
 	void Start () {
         flashingText = GetComponent<Text>();
-        StartCoroutine(BlinkText());
+        StartBlinking();
     }
 	
 	// Update is called once per frame
@@ -18,14 +18,24 @@ public class TextBlink : MonoBehaviour {
 		
 	}
     
-    public IEnumerator BlinkText()
+
+    void StartBlinking()
+    {
+       
+        StartCoroutine("Blink");
+    }
+
+
+    IEnumerator Blink()
     {
         while (true)
         {
-            flashingText.text = "   ";
-            yield return new WaitForSeconds(0.5f);
-            flashingText.text = "Touch to Start";
-            yield return new WaitForSeconds(0.5f);
+            flashingText.text = "efsfsdfsdfsdFewf ";
+            yield return new WaitForSeconds(.5f);
+            flashingText.text = "asdfasdf ";
+            yield return new WaitForSeconds(.5f);
         }
+
     }
+
 }

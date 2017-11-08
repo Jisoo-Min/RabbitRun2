@@ -9,9 +9,8 @@ public class TextBlink : MonoBehaviour {
     Text flashingText;
     
 	void Start () {
-        StopAllCoroutines();
         flashingText = GetComponent<Text>();
-        StartCoroutine("BlinkText");
+        StartCoroutine(BlinkText());
     }
 	
 	// Update is called once per frame
@@ -23,9 +22,9 @@ public class TextBlink : MonoBehaviour {
     {
         while (true)
         {
-            flashingText.text = "";
+            flashingText.text = "   ";
             yield return new WaitForSeconds(0.5f);
-            flashingText.text = "시작하려면 터치하세요.";
+            flashingText.text = "Touch to Start";
             yield return new WaitForSeconds(0.5f);
         }
     }

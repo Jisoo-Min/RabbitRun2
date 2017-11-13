@@ -30,10 +30,10 @@ public class TextBlink : MonoBehaviour {
     {
         while (true)
         {
-            flashingText.text = "efsfsdfsdfsdFewf ";
-            yield return new WaitForSeconds(.5f);
-            flashingText.text = "asdfasdf ";
-            yield return new WaitForSeconds(.5f);
+            flashingText.text = " ";
+            yield return new WaitForSeconds(0.5f);
+            flashingText.text = "시작하려면 터치하세요.";
+            yield return new WaitForSeconds(0.5f);
         }
 
     }

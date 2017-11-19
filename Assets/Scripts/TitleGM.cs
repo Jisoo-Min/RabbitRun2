@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public partial class TitleGM : MonoBehaviour {
 
-    public GameObject progressBarObject;
-    public GameObject signupButtonObject;
+  //  public GameObject progressBarObject;
+    public GameObject signupButtonObject; //가입
     public GameObject makeIdObject;
     public GameObject messageBoxObject;//메시지상자 panel
 
-   // public ProgressBar progressBar;
- //   public Label inputLabel;
+    // public ProgressBar progressBar;
+    public Text inputLabel;
     public Text messageTextLabel;
 
     void OnEnable()
@@ -29,7 +29,7 @@ public partial class TitleGM : MonoBehaviour {
 
     void TurnOnObj(int objNo)
     {
-        progressBarObject.SetActive(objNo == 0); //사용자 정보가 있으면 로딩바
+        //progressBarObject.SetActive(objNo == 0); //사용자 정보가 있으면 로딩바
         signupButtonObject.SetActive(objNo == 1); //사용자 정보가 없으면 가입
         makeIdObject.SetActive(objNo == 2); //아이디 만들기
         messageBoxObject.SetActive(objNo == 3);//메시지상자띄우기
@@ -49,6 +49,57 @@ public partial class TitleGM : MonoBehaviour {
     public void ClickCloseMessageBox() //버튼 클릭하면 닫음 
     {
         messageBoxObject.SetActive(false);
+    }
+    
+    //rabbitRunLogin버튼을 누르면 작동
+    public void ClickOpenInputID()
+    {
+        TurnOnObj(2); 
+    }
+
+    public void ClickinputID()
+    {
+        //아이디 길이 체크
+        string inputID = inputLabel.text;
+        if(!(inputID.Length >=4 && inputID.Length <= 12)) //입력한 아이디가 4~12자가 아니면
+        {
+            PopupWarningMessage("아이디는 4~12자로 입력해야합니다");
+            return;
+        }
+        PopupWarningMessage("이미 존재하는 아이디인지 확인하는 중입니다.");
+        StartCoroutine(InputIDToServer(inputID)); //아이디를 서버에 전달
+    }
+
+    //아이디를 서버로 전달하는 부분 
+    IEnumerator InputIDToServer(string id)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("userID", id);
+
+        string url = "http://localhost/rabbitrun2/postUserID.php";
+        WWW www = new WWW(url, form);
+
+        yield return www;
+
+        if(www.isDone&& www.error==null)
+        {
+            Debug.Log(www.text); //전달받은 데이터의 앞 5글자를 분리하여 결과 코드로 분석
+            string responseCode = www.text.Substring(0, 5);
+            switch(responseCode)
+            {
+                case "query"://서버에서 sql 쿼리 에러가 발생한 경우
+                    break;
+                case "exist": //아이디 중복인 경우
+                    PopupWarningMessage("같은 아이디가 존재합니다. 다른 아이디를 입력하세요.");
+                    break;
+                case "done0":
+                    messageBoxObject.SetActive(false);
+                    string splitUserKeyNo = www.text.Substring(5);
+                    int userKeyNo = System.Convert.ToInt32(splitUserKeyNo);
+                    PlayerPrefs.SetInt("UserKeyNo", userKeyNo);
+                    break;
+            }
+        }
     }
 
 }

@@ -11,7 +11,7 @@ public partial class TitleGM : MonoBehaviour {
     public GameObject messageBoxObject;//메시지상자 panel
 
     // public ProgressBar progressBar;
-    public Text inputLabel;
+    public InputField inputLabel;
     public Text messageTextLabel;
 
     void OnEnable()
@@ -57,6 +57,10 @@ public partial class TitleGM : MonoBehaviour {
         TurnOnObj(2); 
     }
 
+    public void ClickCloseLoginBox()
+    {
+        makeIdObject.SetActive(false);
+    }
     public void ClickinputID()
     {
         //아이디 길이 체크

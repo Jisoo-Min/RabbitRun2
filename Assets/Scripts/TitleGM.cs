@@ -79,7 +79,7 @@ public partial class TitleGM : MonoBehaviour {
         WWWForm form = new WWWForm();
         form.AddField("userID", id);
 
-        string url = "http://localhost/rabbitrun2/postUserID.php";
+        string url = string.Format(GameData.Instance.urlPrefix, "postUserID");
         WWW www = new WWW(url, form);
 
         yield return www;

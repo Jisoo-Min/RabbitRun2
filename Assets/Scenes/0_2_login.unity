@@ -211,7 +211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000060797, y: 0.0000015497}
+  m_AnchoredPosition: {x: 19, y: 47.05}
   m_SizeDelta: {x: 239.7, y: 94.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134204204
@@ -393,13 +393,13 @@ RectTransform:
   - {fileID: 1289628103}
   - {fileID: 1124902999}
   - {fileID: 1568293515}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1652410247}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 283, y: 159}
-  m_SizeDelta: {x: 566, y: 318}
+  m_AnchoredPosition: {x: 0, y: 0.000015259}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &535392745
 MonoBehaviour:
@@ -463,13 +463,13 @@ RectTransform:
   m_Children:
   - {fileID: 134204203}
   - {fileID: 284079973}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1652410247}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 283, y: 159}
-  m_SizeDelta: {x: 566, y: 318}
+  m_AnchoredPosition: {x: 0, y: 0.000015259}
+  m_SizeDelta: {x: 0, y: 0.000030518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &596658319
 MonoBehaviour:
@@ -1073,7 +1073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 124.650024, y: 25.000006}
+  m_AnchoredPosition: {x: 124.64996, y: 24.625002}
   m_SizeDelta: {x: 49.6, y: 49.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1568293516
@@ -1337,6 +1337,8 @@ RectTransform:
   m_Children:
   - {fileID: 1654487948}
   - {fileID: 1770477022}
+  - {fileID: 535392744}
+  - {fileID: 596658318}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1419,7 +1421,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1654487950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1713265006}
+        m_MethodName: ClickOpenInputID
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1654487950
@@ -1495,10 +1508,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6e8cb9ba97ac441b8f006969d3b18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signupButtonObject: {fileID: 0}
+  signupButtonObject: {fileID: 1654487947}
   makeIdObject: {fileID: 535392743}
   messageBoxObject: {fileID: 596658317}
-  inputLabel: {fileID: 0}
+  inputLabel: {fileID: 1289628104}
   messageTextLabel: {fileID: 134204204}
 --- !u!1 &1770477021
 GameObject:
@@ -1512,7 +1525,7 @@ GameObject:
   - component: {fileID: 1770477024}
   - component: {fileID: 1770477023}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: loginToFacebook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

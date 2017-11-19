@@ -30,7 +30,6 @@ public partial class TitleGM : MonoBehaviour {
     void TurnOnObj(int objNo)
     {
         //progressBarObject.SetActive(objNo == 0); //사용자 정보가 있으면 로딩바
-        signupButtonObject.SetActive(objNo == 1); //사용자 정보가 없으면 가입
         makeIdObject.SetActive(objNo == 2); //아이디 만들기
         messageBoxObject.SetActive(objNo == 3);//메시지상자띄우기
     }

@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/0_start.unity
     guid: ca800f0e9f72f7340b591df2bed637fe
   - enabled: 1
-    path: Assets/Scenes/0_2_login.unity
-    guid: 4714e6c355c0a7540963369b6f357374
-  - enabled: 1
     path: Assets/Scenes/1_home.unity
     guid: 33755b710f4082046bb9a10b8a5a6158
   - enabled: 0
@@ -26,3 +23,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/2_2_store.unity
     guid: e7806dd63ab1635489ca466859320225
+  - enabled: 1
+    path: Assets/Scenes/0_2_login.unity
+    guid: 4714e6c355c0a7540963369b6f357374

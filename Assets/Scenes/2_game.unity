@@ -22625,7 +22625,7 @@ GameObject:
   - component: {fileID: 1850283510}
   - component: {fileID: 1850283509}
   - component: {fileID: 1850283515}
-  - component: {fileID: 1850283516}
+  - component: {fileID: 1850283513}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -22721,6 +22721,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1850283513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850283508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5334c0447071b447a27b00d7cd4b54f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1850283515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22730,17 +22741,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 691fde71c14e37e4d99b37f721b03404, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1850283516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1850283508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d819fc5626a21e408bf10826fd0268f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1854900452 stripped
@@ -23922,7 +23922,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1850283516}
+      - m_Target: {fileID: 1850283513}
         m_MethodName: Click
         m_Mode: 1
         m_Arguments:

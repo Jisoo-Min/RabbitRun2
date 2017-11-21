@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class GoToScene2 : MonoBehaviour {
+public class GoToGameScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
     public GameObject WaitTwoPanel;
     public GameObject WaitThreePanel;
 
-    public Text resultScore;
+    public Text resultScore;               
     public Text textScore;
     public Text textCoin;
     public Slider slider;

@@ -4,30 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Jump
-  - Ground
-  - carrot
-  - obstacle
-  - coin
-  - clover
-  - corn
-  - broccoli
-  - rabbit
-  - eel
-  - crab
-  - seashell
-  - seaweed
-  - hook
-  - goal
-  - yellow_fish
-  - red_fish
-  - octopus
-  - blue_fish
-<<<<<<< HEAD
-  - flag
-=======
   - heart
->>>>>>> 201595a74c2ae1d74a2be444fae7be4ad2cd532b
   layers:
   - Default
   - TransparentFX

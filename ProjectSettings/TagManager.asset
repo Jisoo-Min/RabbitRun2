@@ -23,6 +23,7 @@ TagManager:
   - red_fish
   - octopus
   - blue_fish
+  - heart
   layers:
   - Default
   - TransparentFX

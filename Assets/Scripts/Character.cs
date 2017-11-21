@@ -35,6 +35,11 @@ public class Character : MonoBehaviour
             GameManager.manager.AddScore(100);
            
         }
+        else if(item.tag == "heart")
+        {
+            Destroy(item.gameObject);
+            health = health + 20.0f;
+        }
         else if(item.tag == "coin")
         {
             Destroy(item.gameObject);

@@ -5,6 +5,22 @@ TagManager:
   serializedVersion: 2
   tags:
   - heart
+  - octopus
+  - red_fish
+  - yellow_fish
+  - flag
+  - blue_fish
+  - coin
+  - carrot
+  - clover
+  - eel
+  - hook
+  - crab
+  - seashell
+  - broccoli
+  - corn
+  - seaweed
+  - rabbit
   layers:
   - Default
   - TransparentFX

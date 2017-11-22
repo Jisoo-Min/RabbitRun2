@@ -28,8 +28,8 @@ public class MoveObstacle : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D item)   
     {
-      // if(item.tag=="flag")
-            this.transform.localScale = new Vector2(2f, 2f);
-        
+       if(item.tag=="flag")
+            this.transform.localScale = new Vector2(this.transform.localScale.x * 2f, this.transform.localScale.y * 2f);
+
     }
 }

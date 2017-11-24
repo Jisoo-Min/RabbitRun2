@@ -10,7 +10,6 @@ public class Character : MonoBehaviour
     private float jump = 10;
     public float health = 100;
     private int jumpNumber;
-    public int slideNumber=0;
     private bool isOnground;
     private string characterName;
     
@@ -20,11 +19,12 @@ public class Character : MonoBehaviour
 
     public Sprite rabbit1;
     public Sprite rabbit2;
+    public Sprite effect_rabbit;
 
     void Start()
     {
         character = this;
-      
+       
     }
 
     public void SetCharacterName(string name)
@@ -89,6 +89,7 @@ public class Character : MonoBehaviour
         MoveFood.foodSpeed = 5;
         MoveObstacle.obstacleSpeed = 5;
         MoveGround.groundSpeed = 5;
+        GetComponent<SpriteRenderer>().sprite = rabbit1;
         transform.localScale = new Vector2(0.3f, 0.26f);
 
 
@@ -125,7 +126,6 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        
         if (GameManager.manager.end == false) //end가 false 일 경우만 점프가능
         {
             Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();

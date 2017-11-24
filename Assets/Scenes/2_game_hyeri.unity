@@ -1852,7 +1852,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: 3dfbe8a565b767e44a8072b3c394e229, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a120e998a60b5264fb6adc3ef9876ea9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1887,9 +1887,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  slideNumber: 0
-  rabbit1: {fileID: 21300000, guid: 3dfbe8a565b767e44a8072b3c394e229, type: 3}
-  rabbit2: {fileID: 21300000, guid: 01cef2d8ff2098d499b22f35e67b269a, type: 3}
+  rabbit1: {fileID: 21300000, guid: a120e998a60b5264fb6adc3ef9876ea9, type: 3}
+  rabbit2: {fileID: 21300000, guid: cb96b32ab403c614386feca549bd32e1, type: 3}
+  effect_rabbit: {fileID: 21300000, guid: e2547033b515ba54ea9d4967b267bcab, type: 3}
 --- !u!1001 &139007872
 Prefab:
   m_ObjectHideFlags: 0
@@ -15994,7 +15994,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_RootOrder
-      value: 248
+      value: 245
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_LocalScale.x
@@ -16742,7 +16742,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_RootOrder
-      value: 249
+      value: 246
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_LocalScale.x
@@ -20909,7 +20909,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_RootOrder
-      value: 251
+      value: 248
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_LocalScale.x
@@ -22946,7 +22946,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_RootOrder
-      value: 250
+      value: 247
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_LocalScale.x

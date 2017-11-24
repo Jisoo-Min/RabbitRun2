@@ -7,13 +7,13 @@ using UnityEngine.EventSystems;
 public class Character : MonoBehaviour
 {
 
-    private float jump = 8;
+    private float jump = 10;
     public float health = 100;
     private int jumpNumber;
     public int slideNumber=0;
     private bool isOnground;
-
- 
+    private string characterName;
+    
     public static bool checkClick = false;
   
     public static Character character;
@@ -27,6 +27,10 @@ public class Character : MonoBehaviour
       
     }
 
+    public void SetCharacterName(string name)
+    {
+        characterName = name;
+    }
     void OnTriggerEnter2D(Collider2D item)   // 당근을 먹었을 때
     {
         if (item.tag == "carrot") //기본먹이

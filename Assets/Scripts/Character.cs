@@ -50,7 +50,6 @@ public class Character : MonoBehaviour
             else
             {
                 health = health + 20.0f;
-
             }
 
         }
@@ -127,6 +126,11 @@ public class Character : MonoBehaviour
 
     public void PointerDown()      //slideButton 클릭했을때
     {
+        if (SelectCharacter.selectCharacter.GetCharacterName().Equals("HyeRi"))
+        {
+
+        }
+
         GetComponent<SpriteRenderer>().sprite = rabbit2 ;
     }
     public void PointerUp()           //slideButton 클릭을 안했을때

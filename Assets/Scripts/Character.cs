@@ -10,7 +10,6 @@ public class Character : MonoBehaviour
     private float jump = 10;
     public float health = 100;
     private int jumpNumber;
-    public int slideNumber=0;
     private bool isOnground;
     
     public static bool checkClick = false;
@@ -19,6 +18,7 @@ public class Character : MonoBehaviour
 
     public Sprite rabbit1;
     public Sprite rabbit2;
+<<<<<<< HEAD
     public Sprite hyeri;
     public Sprite slideHyeRi;
     public Sprite jisoo;
@@ -28,10 +28,17 @@ public class Character : MonoBehaviour
 
 
 
+=======
+    public Sprite effect_rabbit;
+>>>>>>> e5692f43bc3524d6ca8cde776f1eb3c2a02a494a
 
     void Start()
     {
         character = this;
+<<<<<<< HEAD
+=======
+       
+>>>>>>> e5692f43bc3524d6ca8cde776f1eb3c2a02a494a
     }
 
     void OnTriggerEnter2D(Collider2D item)   // 당근을 먹었을 때
@@ -92,6 +99,7 @@ public class Character : MonoBehaviour
         MoveFood.foodSpeed = 5;
         MoveObstacle.obstacleSpeed = 5;
         MoveGround.groundSpeed = 5;
+        GetComponent<SpriteRenderer>().sprite = rabbit1;
         transform.localScale = new Vector2(0.3f, 0.26f);
 
 
@@ -128,7 +136,6 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        
         if (GameManager.manager.end == false) //end가 false 일 경우만 점프가능
         {
             Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();

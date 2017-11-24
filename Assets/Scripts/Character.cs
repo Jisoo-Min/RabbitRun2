@@ -18,7 +18,6 @@ public class Character : MonoBehaviour
 
     public Sprite rabbit1;
     public Sprite rabbit2;
-<<<<<<< HEAD
     public Sprite hyeri;
     public Sprite slideHyeRi;
     public Sprite jisoo;
@@ -26,19 +25,11 @@ public class Character : MonoBehaviour
 
     private string characterName;
 
-
-
-=======
     public Sprite effect_rabbit;
->>>>>>> e5692f43bc3524d6ca8cde776f1eb3c2a02a494a
 
     void Start()
     {
         character = this;
-<<<<<<< HEAD
-=======
-       
->>>>>>> e5692f43bc3524d6ca8cde776f1eb3c2a02a494a
     }
 
     void OnTriggerEnter2D(Collider2D item)   // 당근을 먹었을 때
@@ -52,7 +43,16 @@ public class Character : MonoBehaviour
         else if(item.tag == "heart")
         {
             Destroy(item.gameObject);
-            health = health + 20.0f;
+            if(health + 20 > 100)
+            {
+                health = 100;
+            }
+            else
+            {
+                health = health + 20.0f;
+
+            }
+
         }
         else if(item.tag == "coin")
         {

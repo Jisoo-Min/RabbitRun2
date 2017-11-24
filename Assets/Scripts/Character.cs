@@ -12,7 +12,6 @@ public class Character : MonoBehaviour
     private int jumpNumber;
     public int slideNumber=0;
     private bool isOnground;
-    private string characterName;
     
     public static bool checkClick = false;
   
@@ -20,17 +19,21 @@ public class Character : MonoBehaviour
 
     public Sprite rabbit1;
     public Sprite rabbit2;
+    public Sprite hyeri;
+    public Sprite slideHyeRi;
+    public Sprite jisoo;
+    public Sprite slideJiSoo;
+
+    private string characterName;
+
+
+
 
     void Start()
     {
         character = this;
-      
     }
 
-    public void SetCharacterName(string name)
-    {
-        characterName = name;
-    }
     void OnTriggerEnter2D(Collider2D item)   // 당근을 먹었을 때
     {
         if (item.tag == "carrot") //기본먹이
@@ -116,7 +119,7 @@ public class Character : MonoBehaviour
 
     public void PointerDown()      //slideButton 클릭했을때
     {
-        GetComponent<SpriteRenderer>().sprite = rabbit2;
+        GetComponent<SpriteRenderer>().sprite = rabbit2 ;
     }
     public void PointerUp()           //slideButton 클릭을 안했을때
     {

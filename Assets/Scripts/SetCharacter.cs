@@ -13,4 +13,20 @@ public class SetCharacter : MonoBehaviour {
 	void Update () {
 		
 	}
+     
+
+    //public void ClickHyeRi()
+    //{
+    //    SetCharacterName("HyeRi");
+    //}
+    //public void ClickGaYeon()
+    //{
+    //    SetCharacterName("GaYeon");
+    //}
+
+    //public void ClickJiSoo()
+    //{
+    //    SetCharacterName("JiSoo");
+    //}
+
 }

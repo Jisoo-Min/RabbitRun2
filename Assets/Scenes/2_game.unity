@@ -1890,6 +1890,10 @@ MonoBehaviour:
   slideNumber: 0
   rabbit1: {fileID: 21300000, guid: 3dfbe8a565b767e44a8072b3c394e229, type: 3}
   rabbit2: {fileID: 21300000, guid: 01cef2d8ff2098d499b22f35e67b269a, type: 3}
+  hyeri: {fileID: 21300000, guid: a120e998a60b5264fb6adc3ef9876ea9, type: 3}
+  slideHyeRi: {fileID: 21300000, guid: cb96b32ab403c614386feca549bd32e1, type: 3}
+  jisoo: {fileID: 21300000, guid: ee3161834af52984fb999b9a9f4e9516, type: 3}
+  slideJiSoo: {fileID: 21300000, guid: 6bab4f469345592448fc400f52b36035, type: 3}
 --- !u!1001 &139007872
 Prefab:
   m_ObjectHideFlags: 0

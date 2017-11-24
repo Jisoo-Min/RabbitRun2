@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/0_2_login.unity
     guid: 4714e6c355c0a7540963369b6f357374
+  - enabled: 1
+    path: Assets/Scenes/select_character.unity
+    guid: d0220ce8b6f54d147b9f915895eb3c05

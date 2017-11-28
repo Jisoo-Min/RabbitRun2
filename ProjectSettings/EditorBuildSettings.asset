@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/select_character.unity
     guid: d0220ce8b6f54d147b9f915895eb3c05
+  - enabled: 1
+    path: Assets/Scenes/2_game_hyeri.unity
+    guid: d41bd0e9f49890745b1cb0c3bccc871b

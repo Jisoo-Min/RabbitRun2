@@ -1616,6 +1616,74 @@ Prefab:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 91268e050b9b64844abc30b7150d49e3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &128340410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 128340411}
+  - component: {fileID: 128340413}
+  - component: {fileID: 128340412}
+  m_Layer: 0
+  m_Name: Magnetic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128340411
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 128340410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 132549045}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &128340412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 128340410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a638cc8b0d869b4388687e56e3039fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acc: 10
+  range: 10
+--- !u!61 &128340413
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 128340410}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40}
+  m_EdgeRadius: 0
 --- !u!1001 &128879803
 Prefab:
   m_ObjectHideFlags: 0
@@ -1871,7 +1939,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -180.51, y: -203.73, z: 0}
   m_LocalScale: {x: 0.3, y: 0.26, z: 0.4302519}
-  m_Children: []
+  m_Children:
+  - {fileID: 128340411}
   m_Father: {fileID: 1453085242}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1887,13 +1956,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  slideNumber: 0
   rabbit1: {fileID: 21300000, guid: 3dfbe8a565b767e44a8072b3c394e229, type: 3}
   rabbit2: {fileID: 21300000, guid: 01cef2d8ff2098d499b22f35e67b269a, type: 3}
   hyeri: {fileID: 21300000, guid: a120e998a60b5264fb6adc3ef9876ea9, type: 3}
   slideHyeRi: {fileID: 21300000, guid: cb96b32ab403c614386feca549bd32e1, type: 3}
   jisoo: {fileID: 21300000, guid: ee3161834af52984fb999b9a9f4e9516, type: 3}
   slideJiSoo: {fileID: 21300000, guid: 6bab4f469345592448fc400f52b36035, type: 3}
+  effect_rabbit: {fileID: 0}
 --- !u!1001 &139007872
 Prefab:
   m_ObjectHideFlags: 0
@@ -15998,7 +16067,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_RootOrder
-      value: 248
+      value: 245
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_LocalScale.x
@@ -16746,7 +16815,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_RootOrder
-      value: 249
+      value: 246
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_LocalScale.x
@@ -20913,7 +20982,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_RootOrder
-      value: 251
+      value: 248
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_LocalScale.x
@@ -22950,7 +23019,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_RootOrder
-      value: 250
+      value: 247
       objectReference: {fileID: 0}
     - target: {fileID: 4501816468223856, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
       propertyPath: m_LocalScale.x

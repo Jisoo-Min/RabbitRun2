@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+public class CharacterName
+{
+    public static string characterName;
+}
+
+
 public class Character : MonoBehaviour
 {
 
@@ -23,17 +29,29 @@ public class Character : MonoBehaviour
     public Sprite jisoo;
     public Sprite slideJiSoo;
 
-    private string characterName;
-
     public Sprite effect_rabbit;
 
+    
     void Start()
     {
+        if (CharacterName.characterName.Equals("JiSoo"))
+        {
+            rabbit1 = jisoo;
+            rabbit2 = slideJiSoo;
+        }
+        else if(CharacterName.characterName.Equals("HyeRi"))
+        {
+            rabbit1 = hyeri;
+            rabbit2 = slideHyeRi;
+        }   
+        
         character = this;
+        PointerUp();
     }
 
     void OnTriggerEnter2D(Collider2D item)   // 당근을 먹었을 때
     {
+
         if (item.tag == "carrot") //기본먹이
         {
             Destroy(item.gameObject);
@@ -126,11 +144,6 @@ public class Character : MonoBehaviour
 
     public void PointerDown()      //slideButton 클릭했을때
     {
-        if (SelectCharacter.selectCharacter.GetCharacterName().Equals("HyeRi"))
-        {
-
-        }
-
         GetComponent<SpriteRenderer>().sprite = rabbit2 ;
     }
     public void PointerUp()           //slideButton 클릭을 안했을때

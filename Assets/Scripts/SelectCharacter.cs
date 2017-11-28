@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**********************************
+ * 기능 : 선택한 캐릭터 정보 전달
+ * ********************************/
 public class SelectCharacter : MonoBehaviour {
 
-    public static SelectCharacter selectCharacter;
-    private string characterName;
+  //  public static string characterName;
 
+    // Use this for initialization
+    void Start () {
 
-
-	// Use this for initialization
-	void Start () {
-        selectCharacter = this;
 	}
 	
 	// Update is called once per frame
@@ -22,13 +23,11 @@ public class SelectCharacter : MonoBehaviour {
 
     public void SetCharacterName(string name)
     {
-        characterName = name;
+        // Character.character.characterName = name;
+
+        CharacterName.characterName = name;
     }
 
-    public string GetCharacterName()
-    {
-        return characterName;
-    }
 
     public void ClickHyeRi()
     {

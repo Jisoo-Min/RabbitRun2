@@ -18,8 +18,5 @@ public class GoToGameScene : MonoBehaviour {
     {
         SceneManager.LoadScene(2);
     }
-    public void ClickHyeriScene()
-    {
-        SceneManager.LoadScene(5);
-    }
+   
 }

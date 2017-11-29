@@ -2,25 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class GoToGameScene : MonoBehaviour {
+public class GoToGameScene : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void Click()
     {
         SceneManager.LoadScene(2);
     }
-<<<<<<< HEAD
-   
-=======
-
->>>>>>> cc429e9740b35ac1dba0ede7202294bcb698dcb5
 }

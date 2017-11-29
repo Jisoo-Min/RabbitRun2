@@ -20,5 +20,7 @@ public class GoToGameScene : MonoBehaviour
     public void Click()
     {
         SceneManager.LoadScene(2);
+
     }
+
 }

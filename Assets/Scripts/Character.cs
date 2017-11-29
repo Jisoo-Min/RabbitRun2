@@ -200,13 +200,7 @@ public class Character : MonoBehaviour
         if (GameManager.manager.end == false) //end가 false 일 경우만 점프가능
         {
             Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
-<<<<<<< HEAD
-            
-=======
 
-
-
->>>>>>> c872a38abf937d574fd0a94fa03414effe844606
             if (checkClick == true) // 화면이 클릭되었을때
             {
                 ++jumpNumber;
@@ -234,21 +228,5 @@ public class Character : MonoBehaviour
         }
 
         checkClick = false;
-<<<<<<< HEAD
-    
     }
-<<<<<<< HEAD
-=======
- 
-
-=======
->>>>>>> c872a38abf937d574fd0a94fa03414effe844606
-
-    }
-
-<<<<<<< HEAD
->>>>>>> d243586170c3717f2cd9e5e2acd988fc3a620246
 }
-=======
-}
->>>>>>> c872a38abf937d574fd0a94fa03414effe844606

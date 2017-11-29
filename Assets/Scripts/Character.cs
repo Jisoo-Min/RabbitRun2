@@ -58,7 +58,18 @@ public class Character : MonoBehaviour
 
         if (ignore) //&& (item.tag == "eel") || (item.tag == "crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook") || (item.tag == "red_fish") || (item.tag == "yellow_fish") || (item.tag == "blue_fish") || (item.tag == "octopus"))
         {
+<<<<<<< HEAD
             return;
+=======
+            Destroy(item.gameObject);
+            GameManager.manager.AddScore(100);
+           
+        }
+        else if(item.tag=="chick")        //병아리를 먹으면 캐릭터 크기증가 및 속도 증가, 장애물 충돌 무시
+        {
+            Destroy(item.gameObject);
+            Invoke("SetNormal", 3);
+>>>>>>> 44d5ec832a48f74ec7a83419f7b18453e1ea6d20
         }
 
    

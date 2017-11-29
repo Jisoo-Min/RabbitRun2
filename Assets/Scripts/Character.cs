@@ -61,10 +61,10 @@ public class Character : MonoBehaviour
         else if(item.tag=="chick")        //병아리를 먹으면 캐릭터 크기증가 및 속도 증가, 장애물 충돌 무시
         {
             Destroy(item.gameObject);
-            Character.character.transform.localScale = new Vector2(0.6f, 0.4f);
-            MoveFood.foodSpeed = 10;
-            MoveObstacle.obstacleSpeed = 10;
-            MoveGround.groundSpeed = 10;
+            
+           
+            
+           
             Invoke("SetNormal", 3);
         }
 

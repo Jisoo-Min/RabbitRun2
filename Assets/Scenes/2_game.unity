@@ -13687,7 +13687,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.12418
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114917850506322190, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1068638970
@@ -16085,7 +16086,8 @@ Prefab:
       propertyPath: m_Name
       value: heart (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114917850506322190, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1320362226 stripped
@@ -16833,7 +16835,8 @@ Prefab:
       propertyPath: m_Name
       value: heart (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114917850506322190, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1369689210 stripped
@@ -21000,7 +21003,8 @@ Prefab:
       propertyPath: m_Name
       value: heart (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114917850506322190, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1665569440 stripped
@@ -23037,7 +23041,8 @@ Prefab:
       propertyPath: m_Name
       value: heart (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114917850506322190, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 58ccff1429c6c5d4fbb687100dbd0c3d, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1848628576 stripped

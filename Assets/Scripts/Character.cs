@@ -30,10 +30,13 @@ public class Character : MonoBehaviour
     public Sprite slideJiSoo;
 
     public Sprite effect_rabbit;
+    public bool ignore = false;
 
     
+
     void Start()
     {
+
         if (CharacterName.characterName.Equals("JiSoo"))
         {
             rabbit1 = jisoo;
@@ -51,66 +54,98 @@ public class Character : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D item)   // 당근을 먹었을 때
     {
+        Debug.Log("ignore: " + ignore);
 
-        if (item.tag == "carrot") //기본먹이
+        if (ignore) //&& (item.tag == "eel") || (item.tag == "crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook") || (item.tag == "red_fish") || (item.tag == "yellow_fish") || (item.tag == "blue_fish") || (item.tag == "octopus"))
         {
-            Destroy(item.gameObject);
-            GameManager.manager.AddScore(100);
-           
+            return;
         }
-     
 
-        else if(item.tag == "heart")
-        {
-            Destroy(item.gameObject);
-            if(health + 20 > 100)
+   
+          else if (item.tag == "carrot") //기본먹이
             {
-                health = 100;
-            }
-            else
-            {
-                health = health + 20.0f;
+
+                Destroy(item.gameObject);
+                GameManager.manager.AddScore(100);
+
             }
 
-        }
-        else if(item.tag == "coin")
-        {
-            Destroy(item.gameObject);
-            GameManager.manager.AddCoin(1);
-            
-        }
-        else if (item.tag == "broccoli") //크기증가먹이
-        {
-            Destroy(item.gameObject);
-            GameManager.manager.AddScore(200);
-            Character.character.transform.localScale = new Vector2(0.6f,0.4f);
-            Invoke("SetNormal", 3);
-        }
-        else if (item.tag =="corn") //크기감소먹이
-        {
-            Destroy(item.gameObject);
-            GameManager.manager.AddScore(30);
-            transform.localScale = new Vector2(0.2f, 0.15f);
-            Invoke("SetNormal", 3);
-        }
-        else if(item.tag =="clover")//속도 증가먹이
-        {
-            GameManager.manager.AddScore(200);
-            Destroy(item.gameObject);
+            else if (item.tag == "chick")       //chick을 먹으면  StartIgnore() 실행
+            {
+                ignore = true;
+                Destroy(item.gameObject);
+                StartCoroutine("SetIgnore");
 
-            MoveFood.foodSpeed = 10;
-            MoveObstacle.obstacleSpeed = 10;
-            MoveGround.groundSpeed = 10;
-            Invoke("SetNormal", 3);
-            
-        }
+                Character.character.transform.localScale = new Vector2(0.8f, 0.6f);
+                MoveFood.foodSpeed = 10;
+                MoveObstacle.obstacleSpeed = 10;
+                MoveGround.groundSpeed = 10;
+                Invoke("SetNormal", 4);
 
-        if((item.tag =="eel") || (item.tag=="crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook") || (item.tag == "red_fish") || (item.tag == "yellow_fish") || (item.tag == "blue_fish") || (item.tag == "octopus"))
-        {
-            iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.1f));
-            health = health - 20.0f;
-        }
 
+
+            }
+
+            else if (item.tag == "heart")
+            {
+                Destroy(item.gameObject);
+                if (health + 20 > 100)
+                {
+                    health = 100;
+                }
+                else
+                {
+                    health = health + 20.0f;
+                }
+
+            }
+            else if (item.tag == "coin")
+            {
+                Destroy(item.gameObject);
+                GameManager.manager.AddCoin(1);
+
+            }
+            else if (item.tag == "broccoli") //크기증가먹이
+            {
+                Destroy(item.gameObject);
+                GameManager.manager.AddScore(200);
+                Character.character.transform.localScale = new Vector2(0.6f, 0.4f);
+                Invoke("SetNormal", 3);
+            }
+            else if (item.tag == "corn") //크기감소먹이
+            {
+                Destroy(item.gameObject);
+                GameManager.manager.AddScore(30);
+                transform.localScale = new Vector2(0.2f, 0.15f);
+                Invoke("SetNormal", 3);
+            }
+            else if (item.tag == "clover")//속도 증가먹이
+            {
+                GameManager.manager.AddScore(200);
+                Destroy(item.gameObject);
+
+                MoveFood.foodSpeed = 10;
+                MoveObstacle.obstacleSpeed = 10;
+                MoveGround.groundSpeed = 10;
+                Invoke("SetNormal", 3);
+
+            }
+
+            else if ((item.tag == "eel") || (item.tag == "crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook") || (item.tag == "red_fish") || (item.tag == "yellow_fish") || (item.tag == "blue_fish") || (item.tag == "octopus"))
+            {
+                iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.1f));
+                health = health - 20.0f;
+            }
+       
+
+    }
+
+
+    IEnumerator SetIgnore()
+    {
+        yield return new WaitForSeconds(3);   //3초후에 다음 명령어 실행
+        ignore = false;
+    
     }
 
     void SetNormal()
@@ -193,7 +228,6 @@ public class Character : MonoBehaviour
         checkClick = false;
     
     }
-
  
 
 

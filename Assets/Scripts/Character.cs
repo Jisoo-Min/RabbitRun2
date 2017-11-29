@@ -76,8 +76,7 @@ public class Character : MonoBehaviour
                 ignore = true;
 
                 StartCoroutine("SetIgnore");
-
-                Character.character.transform.localScale = new Vector2(0.8f, 0.6f);
+                Character.character.transform.localScale = new Vector2(0.6f, 0.4f);
                 MoveFood.foodSpeed = 10;
                 MoveObstacle.obstacleSpeed = 10;
                 MoveGround.groundSpeed = 10;
@@ -109,6 +108,7 @@ public class Character : MonoBehaviour
         }
         else if (item.tag == "broccoli") //크기증가먹이
         {
+
             Destroy(item.gameObject);
             GameManager.manager.AddScore(200);
             Character.character.transform.localScale = new Vector2(0.6f, 0.4f);

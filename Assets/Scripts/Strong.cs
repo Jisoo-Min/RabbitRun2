@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Strong : MonoBehaviour {
 
     public GameObject spoon;
+    public int angle = 0;
 
     // Use this for initialization
     void Start () {
@@ -19,14 +20,16 @@ public class Strong : MonoBehaviour {
         if (CharacterName.characterName.Equals("JiSoo"))
         {
             spoon.SetActive(true);
+            UpdateStrong();
         }
-        
-
 
     }
-    void UpdateStrong(string tag)
+    void UpdateStrong()
     {
-     //   transform.Rotate(Vector3(1, 0, 0) * speed * Time.deltaTime);
+        angle += 00;
+        spoon.transform.localRotation = Quaternion.Euler(0f, 0f, angle);
+        //transform.localEulerAngles = new Vector3(10, 0, 0);
+
     }
     
 }

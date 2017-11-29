@@ -67,7 +67,6 @@ public class Character : MonoBehaviour
         }
         else if (item.tag == "chick")       //chick을 먹으면  StartIgnore() 실행
         {
-            
             Destroy(item.gameObject);
             GameManager.manager.AddScore(300);
 
@@ -133,7 +132,7 @@ public class Character : MonoBehaviour
 
         }
 
-        if (CharacterName.characterName.Equals("HyeRi") && ignore)
+        if (CharacterName.characterName.Equals("HyeRi") && ignore) //장애물만 무시하기 위해 아래로 이동 -> 위치는 먹이랑 장애물 사이
         {
             return;
         }

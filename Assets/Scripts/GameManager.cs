@@ -59,7 +59,6 @@ public class GameManager : MonoBehaviour {
 		if(ready ==true)
         {
             ready = false;
-            Character.character.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1; //
         }
         
         if(Character.character.health == 0) //체력이 0일때 게임 중지 

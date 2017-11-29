@@ -49,7 +49,7 @@ public class Character : MonoBehaviour
         PointerUp();
     }
 
-    void OnTriggerEnter2D(Collider2D item)   // 당근을 먹었을 때
+    void OnTriggerEnter2D(Collider2D item)   // 먹이를 먹었을 때
     {
 
         if (item.tag == "carrot") //기본먹이
@@ -162,9 +162,7 @@ public class Character : MonoBehaviour
         if (GameManager.manager.end == false) //end가 false 일 경우만 점프가능
         {
             Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
-
             
-
             if (checkClick == true) // 화면이 클릭되었을때
             {
                 ++jumpNumber;
@@ -172,9 +170,7 @@ public class Character : MonoBehaviour
 
                 if (isOnground == true) //땅에 있을때
                 {
-
                     rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump);
-
                 }
 
                 else if (isOnground == false) //점프중일때
@@ -196,9 +192,4 @@ public class Character : MonoBehaviour
         checkClick = false;
     
     }
-
- 
-
-
-
 }

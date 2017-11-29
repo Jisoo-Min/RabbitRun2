@@ -17,10 +17,7 @@ public class GoToGameScene : MonoBehaviour {
     public void Click()
     {
         SceneManager.LoadScene(2);
-    }
-<<<<<<< HEAD
-   
-=======
 
->>>>>>> cc429e9740b35ac1dba0ede7202294bcb698dcb5
+    }
+
 }

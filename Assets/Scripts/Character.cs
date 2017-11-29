@@ -17,9 +17,9 @@ public class Character : MonoBehaviour
     public float health = 100;
     private int jumpNumber;
     private bool isOnground;
-    
+
     public static bool checkClick = false;
-  
+
     public static Character character;
 
     public Sprite rabbit1;
@@ -32,7 +32,7 @@ public class Character : MonoBehaviour
     public Sprite effect_rabbit;
     public bool ignore = false;
 
-    
+
 
     void Start()
     {
@@ -42,12 +42,12 @@ public class Character : MonoBehaviour
             rabbit1 = jisoo;
             rabbit2 = slideJiSoo;
         }
-        else if(CharacterName.characterName.Equals("HyeRi"))
+        else if (CharacterName.characterName.Equals("HyeRi"))
         {
             rabbit1 = hyeri;
             rabbit2 = slideHyeRi;
-        }   
-        
+        }
+
         character = this;
         PointerUp();
     }
@@ -56,98 +56,93 @@ public class Character : MonoBehaviour
     {
         Debug.Log("ignore: " + ignore);
 
-        if (ignore) //&& (item.tag == "eel") || (item.tag == "crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook") || (item.tag == "red_fish") || (item.tag == "yellow_fish") || (item.tag == "blue_fish") || (item.tag == "octopus"))
+       
+
+        if (item.tag == "carrot") //기본먹이
         {
-<<<<<<< HEAD
-            return;
-=======
+
             Destroy(item.gameObject);
             GameManager.manager.AddScore(100);
-           
+
         }
-        else if(item.tag=="chick")        //병아리를 먹으면 캐릭터 크기증가 및 속도 증가, 장애물 충돌 무시
+        else if (item.tag == "chick")       //chick을 먹으면  StartIgnore() 실행
         {
+            
             Destroy(item.gameObject);
-            Invoke("SetNormal", 3);
->>>>>>> 44d5ec832a48f74ec7a83419f7b18453e1ea6d20
-        }
+            GameManager.manager.AddScore(300);
 
-   
-          else if (item.tag == "carrot") //기본먹이
-            {
-
-                Destroy(item.gameObject);
-                GameManager.manager.AddScore(100);
-
-            }
-
-            else if (item.tag == "chick")       //chick을 먹으면  StartIgnore() 실행
+            if (CharacterName.characterName.Equals("HyeRi"))
             {
                 ignore = true;
-                Destroy(item.gameObject);
+
                 StartCoroutine("SetIgnore");
-
-                Character.character.transform.localScale = new Vector2(0.8f, 0.6f);
-                MoveFood.foodSpeed = 10;
-                MoveObstacle.obstacleSpeed = 10;
-                MoveGround.groundSpeed = 10;
-                Invoke("SetNormal", 3);
-
-
-
-            }
-
-            else if (item.tag == "heart")
-            {
-                Destroy(item.gameObject);
-                if (health + 20 > 100)
-                {
-                    health = 100;
-                }
-                else
-                {
-                    health = health + 20.0f;
-                }
-
-            }
-            else if (item.tag == "coin")
-            {
-                Destroy(item.gameObject);
-                GameManager.manager.AddCoin(1);
-
-            }
-            else if (item.tag == "broccoli") //크기증가먹이
-            {
-                Destroy(item.gameObject);
-                GameManager.manager.AddScore(200);
                 Character.character.transform.localScale = new Vector2(0.6f, 0.4f);
-                Invoke("SetNormal", 3);
-            }
-            else if (item.tag == "corn") //크기감소먹이
-            {
-                Destroy(item.gameObject);
-                GameManager.manager.AddScore(30);
-                transform.localScale = new Vector2(0.2f, 0.15f);
-                Invoke("SetNormal", 3);
-            }
-            else if (item.tag == "clover")//속도 증가먹이
-            {
-                GameManager.manager.AddScore(200);
-                Destroy(item.gameObject);
-
                 MoveFood.foodSpeed = 10;
                 MoveObstacle.obstacleSpeed = 10;
                 MoveGround.groundSpeed = 10;
                 Invoke("SetNormal", 3);
-
             }
 
-            else if ((item.tag == "eel") || (item.tag == "crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook") || (item.tag == "red_fish") || (item.tag == "yellow_fish") || (item.tag == "blue_fish") || (item.tag == "octopus"))
+
+
+        }
+
+        else if (item.tag == "heart")
+        {
+            Destroy(item.gameObject);
+            if (health + 20 > 100)
             {
-                iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.1f));
-                health = health - 20.0f;
+                health = 100;
             }
-       
+            else
+            {
+                health = health + 20.0f;
+            }
+
+        }
+        else if (item.tag == "coin")
+        {
+            Destroy(item.gameObject);
+            GameManager.manager.AddCoin(1);
+
+        }
+        else if (item.tag == "broccoli") //크기증가먹이
+        {
+
+            Destroy(item.gameObject);
+            GameManager.manager.AddScore(200);
+            Character.character.transform.localScale = new Vector2(0.6f, 0.4f);
+            Invoke("SetNormal", 3);
+        }
+        else if (item.tag == "corn") //크기감소먹이
+        {
+            Destroy(item.gameObject);
+            GameManager.manager.AddScore(30);
+            transform.localScale = new Vector2(0.2f, 0.15f);
+            Invoke("SetNormal", 3);
+        }
+        else if (item.tag == "clover")//속도 증가먹이
+        {
+            GameManager.manager.AddScore(200);
+            Destroy(item.gameObject);
+
+            MoveFood.foodSpeed = 10;
+            MoveObstacle.obstacleSpeed = 10;
+            MoveGround.groundSpeed = 10;
+            Invoke("SetNormal", 3);
+
+        }
+
+        if (CharacterName.characterName.Equals("HyeRi") && ignore)
+        {
+            return;
+        }
+        else if ((item.tag == "eel") || (item.tag == "crab") || (item.tag == "seashell") || (item.tag == "seaweed") || (item.tag == "hook") || (item.tag == "red_fish") || (item.tag == "yellow_fish") || (item.tag == "blue_fish") || (item.tag == "octopus"))
+        {
+            iTween.ShakePosition(Camera.main.gameObject, iTween.Hash("x", 0.2, "y", 0.2, "time", 0.1f));
+            health = health - 20.0f;
+        }
+
 
     }
 
@@ -156,7 +151,7 @@ public class Character : MonoBehaviour
     {
         yield return new WaitForSeconds(3);   //3초후에 다음 명령어 실행
         ignore = false;
-    
+
     }
 
     void SetNormal()
@@ -174,9 +169,9 @@ public class Character : MonoBehaviour
         jumpNumber = 0;
         isOnground = true;
 
-        if(collision.gameObject.name == "deadline" || collision.gameObject.name =="turtle_side")//죽는 라인에 충돌할 경우 게임 중지 
+        if (collision.gameObject.name == "deadline" || collision.gameObject.name == "turtle_side")//죽는 라인에 충돌할 경우 게임 중지 
         {
-            GameManager.manager.GameOver();            
+            GameManager.manager.GameOver();
         }
     }
 
@@ -192,7 +187,7 @@ public class Character : MonoBehaviour
 
     public void PointerDown()      //slideButton 클릭했을때
     {
-        GetComponent<SpriteRenderer>().sprite = rabbit2 ;
+        GetComponent<SpriteRenderer>().sprite = rabbit2;
     }
     public void PointerUp()           //slideButton 클릭을 안했을때
     {
@@ -205,7 +200,13 @@ public class Character : MonoBehaviour
         if (GameManager.manager.end == false) //end가 false 일 경우만 점프가능
         {
             Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+<<<<<<< HEAD
             
+=======
+
+
+
+>>>>>>> c872a38abf937d574fd0a94fa03414effe844606
             if (checkClick == true) // 화면이 클릭되었을때
             {
                 ++jumpNumber;
@@ -233,13 +234,21 @@ public class Character : MonoBehaviour
         }
 
         checkClick = false;
+<<<<<<< HEAD
     
     }
 <<<<<<< HEAD
 =======
  
 
+=======
+>>>>>>> c872a38abf937d574fd0a94fa03414effe844606
 
+    }
 
+<<<<<<< HEAD
 >>>>>>> d243586170c3717f2cd9e5e2acd988fc3a620246
 }
+=======
+}
+>>>>>>> c872a38abf937d574fd0a94fa03414effe844606

@@ -15,8 +15,11 @@ public class Magnetic : MonoBehaviour {
     // Update is called once per frame
     private void FixedUpdate() //update된 후 수행
     {
-        UpdateMag("carrot");
-        UpdateMag("coin");
+        if (CharacterName.characterName.Equals("GaYeon"))
+        {
+            UpdateMag("carrot");
+            UpdateMag("coin");
+        }
     }
 
     void UpdateMag(string tag) 

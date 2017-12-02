@@ -36,6 +36,7 @@ public class Strong : MonoBehaviour {
             UpdateStrong("hook");
             UpdateStrong("red_fish");
             UpdateStrong("yellow_fish");
+            UpdateStrong("blue_fish");
             UpdateStrong("octopus");
             angle += 100;
             spoon.transform.localRotation = Quaternion.Euler(0f, 0f, angle);

@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class GoToScene1 : MonoBehaviour {
+public class GoToLoginScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -12,9 +11,11 @@ public class GoToScene1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
-    public void Click() {
-        SceneManager.LoadScene(1);
+       
     }
+    public void Click()
+    {
+        SceneManager.LoadScene(3);
+    }
+
 }

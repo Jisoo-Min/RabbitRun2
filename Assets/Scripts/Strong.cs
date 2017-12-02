@@ -13,7 +13,16 @@ public class Strong : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-       
+        if (CharacterName.characterName.Equals("JiSoo"))
+        {
+            Instantiate(spoon);
+
+        }
+        else
+        {
+            Destroy(spoon);
+        }
+        
     }
 	
 	// Update is called once per frame
@@ -28,10 +37,12 @@ public class Strong : MonoBehaviour {
             UpdateStrong("red_fish");
             UpdateStrong("yellow_fish");
             UpdateStrong("octopus");
-        }
+            angle += 100;
+            spoon.transform.localRotation = Quaternion.Euler(0f, 0f, angle);
 
-        angle += 100;
-        spoon.transform.localRotation = Quaternion.Euler(0f, 0f, angle);
+        }
+       
+
     }
 
 

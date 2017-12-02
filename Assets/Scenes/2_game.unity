@@ -15185,8 +15185,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1236512404}
   m_LocalRotation: {x: 0.006578168, y: -0, z: -0, w: 0.99997836}
-  m_LocalPosition: {x: -362.91, y: -204.01, z: 0}
-  m_LocalScale: {x: 0.32285517, y: 0.26231825, z: 0.46303004}
+  m_LocalPosition: {x: -309.2, y: -172.3, z: 0}
+  m_LocalScale: {x: 0.33003378, y: 0.26815084, z: 0.47332543}
   m_Children:
   - {fileID: 1481581563}
   m_Father: {fileID: 1850283512}
@@ -18699,8 +18699,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1481581562}
   m_LocalRotation: {x: 0.000011877158, y: 0.00042631652, z: 0.0045691775, w: -0.9999895}
-  m_LocalPosition: {x: -0.9, y: 0.2, z: 0}
-  m_LocalScale: {x: 11.64403, y: 14.102022, z: 2.2122157}
+  m_LocalPosition: {x: 1.7, y: 1, z: -0.1}
+  m_LocalScale: {x: 10.636304, y: 12.031569, z: 2.2122157}
   m_Children: []
   m_Father: {fileID: 1236512405}
   m_RootOrder: 0
@@ -19325,7 +19325,6 @@ GameObject:
   - component: {fileID: 1548180794}
   - component: {fileID: 1548180793}
   - component: {fileID: 1548180792}
-  - component: {fileID: 1548180795}
   m_Layer: 5
   m_Name: stopPlay
   m_TagString: Untagged
@@ -19437,17 +19436,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1548180790}
---- !u!114 &1548180795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1548180790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691fde71c14e37e4d99b37f721b03404, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1551298025
 Prefab:
   m_ObjectHideFlags: 0
@@ -23213,9 +23201,9 @@ GameObject:
   - component: {fileID: 1850283511}
   - component: {fileID: 1850283510}
   - component: {fileID: 1850283509}
-  - component: {fileID: 1850283515}
   - component: {fileID: 1850283513}
   - component: {fileID: 1850283514}
+  - component: {fileID: 1850283515}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -23345,7 +23333,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1850283508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691fde71c14e37e4d99b37f721b03404, type: 3}
+  m_Script: {fileID: 11500000, guid: bc109c3751b42fa4d89a0793f27b19b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1854900452 stripped

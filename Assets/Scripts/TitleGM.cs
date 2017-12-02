@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public partial class TitleGM : MonoBehaviour {
 
@@ -93,7 +94,7 @@ public partial class TitleGM : MonoBehaviour {
                 case "query"://서버에서 sql 쿼리 에러가 발생한 경우
                     break;
                 case "exist": //아이디 중복인 경우
-                    PopupWarningMessage("같은 아이디가 존재합니다. 다른 아이디를 입력하세요.");
+                    SceneManager.LoadScene(1);
                     break;
                 case "done0":
                     messageBoxObject.SetActive(false);

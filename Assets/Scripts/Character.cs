@@ -65,7 +65,7 @@ public class Character : MonoBehaviour
             GameManager.manager.AddScore(100);
 
         }
-        else if (item.tag == "chick")       //chick을 먹으면  StartIgnore() 실행
+        else if (item.tag == "chick")  //chick을 먹으면  StartIgnore() 실행
         {
             Destroy(item.gameObject);
             GameManager.manager.AddScore(300);

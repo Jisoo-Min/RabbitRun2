@@ -146,6 +146,8 @@ public class GameManager : MonoBehaviour {
                 WaitOnePanel.SetActive(false);
                 StartCoroutine(this.LoadingEnd());
                 Time.timeScale = 1.0f; //게임시작
+               
+                   
             }
         }
     }

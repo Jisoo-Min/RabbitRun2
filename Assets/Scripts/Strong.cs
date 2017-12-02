@@ -26,7 +26,7 @@ public class Strong : MonoBehaviour {
     }
     void UpdateStrong()
     {
-        angle += 00;
+        angle += 100;
         spoon.transform.localRotation = Quaternion.Euler(0f, 0f, angle);
         //transform.localEulerAngles = new Vector3(10, 0, 0);
 

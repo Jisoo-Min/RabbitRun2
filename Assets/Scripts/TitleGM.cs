@@ -7,17 +7,17 @@ using UnityEngine.SceneManagement;
 public partial class TitleGM : MonoBehaviour {
 
   //  public GameObject progressBarObject;
-    public GameObject signupButtonObject; //가입
-    public GameObject makeIdObject;
+    public GameObject signupButtonObject; //가입버튼
+    public GameObject makeIdObject; //ID입력panel
     public GameObject messageBoxObject;//메시지상자 panel
 
     // public ProgressBar progressBar;
-    public InputField inputLabel;
+    public InputField inputLabel; //아이디 입력
     public Text messageTextLabel;
 
     void OnEnable()
     {
-        int userKeyNo = PlayerPrefs.GetInt("UserKeyNo");
+        int userKeyNo = PlayerPrefs.GetInt("UserKeyNo"); //UserKeyNo를 받아온다.
         if (userKeyNo > 0)
         {
             TurnOnObj(0); //사용자 정보 로딩 시작 

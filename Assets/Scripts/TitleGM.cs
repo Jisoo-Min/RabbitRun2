@@ -20,7 +20,7 @@ public partial class TitleGM : MonoBehaviour {
         int userKeyNo = PlayerPrefs.GetInt("UserKeyNo");
         if (userKeyNo > 0)
         {
-            TurnOnObj(0); //사용자 정보 로딩 시작
+            TurnOnObj(0); //사용자 정보 로딩 시작 
         }
         else
         {

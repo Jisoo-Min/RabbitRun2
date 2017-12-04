@@ -15170,7 +15170,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1236512405}
-  - component: {fileID: 1236512406}
   m_Layer: 0
   m_Name: spoon
   m_TagString: Untagged
@@ -15185,33 +15184,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1236512404}
   m_LocalRotation: {x: 0.006578168, y: -0, z: -0, w: 0.99997836}
-  m_LocalPosition: {x: -309.25, y: -171.56, z: 0}
+  m_LocalPosition: {x: -326.2, y: -181.8, z: 0}
   m_LocalScale: {x: 0.33003378, y: 0.26815084, z: 0.47332543}
   m_Children:
   - {fileID: 1481581563}
   m_Father: {fileID: 1850283512}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0.754, y: 0, z: 0}
---- !u!50 &1236512406
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1236512404}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!1 &1237263892
 GameObject:
   m_ObjectHideFlags: 0
@@ -18685,6 +18664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481581563}
   - component: {fileID: 1481581564}
+  - component: {fileID: 1481581565}
   m_Layer: 0
   m_Name: effect_jisoo_tool
   m_TagString: Untagged
@@ -18699,7 +18679,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1481581562}
   m_LocalRotation: {x: 0.000011877158, y: 0.00042631652, z: 0.0045691775, w: -0.9999895}
-  m_LocalPosition: {x: 1.4, y: 0.3, z: -0.09}
+  m_LocalPosition: {x: 0.2, y: -1.5, z: -0.1}
   m_LocalScale: {x: 10.636304, y: 12.031569, z: 2.2122157}
   m_Children: []
   m_Father: {fileID: 1236512405}
@@ -18747,6 +18727,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!50 &1481581565
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481581562}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!4 &1483648967 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4785369347592230, guid: a5def8aabd70f5c4a989882ba7d7dcb7,

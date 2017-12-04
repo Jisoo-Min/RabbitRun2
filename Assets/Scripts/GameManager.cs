@@ -8,8 +8,7 @@ using UnityEngine.UI;
  * 게임의 준비, 종료, 시작 처리 ( 게임의 전반적인 동작 관리)            
  * ************************************************/
 public class GameManager : MonoBehaviour {
-
-    public float waitingTime = 3.0f;
+    
     public static GameManager manager;
 
     public GameObject resultPanel;
@@ -144,15 +143,9 @@ public class GameManager : MonoBehaviour {
             if (Timer >= 90)
             {
                 WaitOnePanel.SetActive(false);
-                StartCoroutine(this.LoadingEnd());
                 Time.timeScale = 1.0f; //게임시작
-               
                    
             }
         }
-    }
-    IEnumerator LoadingEnd()
-    { 
-        yield return new WaitForSeconds(1.0f);
     }
 }

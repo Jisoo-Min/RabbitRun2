@@ -54,10 +54,6 @@ public class Character : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D item)   // 먹이를 먹었을 때
     {
-        Debug.Log("ignore: " + ignore);
-
-       
-
         if (item.tag == "carrot") //기본먹이
         {
 
@@ -117,7 +113,7 @@ public class Character : MonoBehaviour
         {
             Destroy(item.gameObject);
             GameManager.manager.AddScore(30);
-            transform.localScale = new Vector2(0.2f, 0.15f);
+             Character.character.transform.localScale = new Vector2(0.2f, 0.15f);
             Invoke("SetNormal", 3);
         }
         else if (item.tag == "clover")//속도 증가먹이
